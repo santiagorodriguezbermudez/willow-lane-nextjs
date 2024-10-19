@@ -11,7 +11,7 @@ export default function InvestorRelations() {
       <header className="mb-12 text-center">
         <h1 className="text-4xl font-bold text-primary mb-4">Investor Relations</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Access and review the company's SEC filings for more details about Willow Lane Acquisition Corporation and its recent activities.
+          Access and review the company&apos;s SEC filings for more details about Willow Lane Acquisition Corporation and its recent activities.
         </p>
       </header>
 
