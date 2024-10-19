@@ -90,6 +90,23 @@ const teamMembers = {
     }
   };
 
+
+export async function generateMetadata({ params }) {
+  const member = teamMembers[params.slug]
+  
+  if (!member) {
+    return {
+      title: 'Team Member Not Found'
+    }
+  }
+
+  return {
+    title: `${member.name} | Willow Lane Acquisition Corporation`,
+    description: `Learn about ${member.name}, ${member.title} at Willow Lane Acquisition Corporation.`,
+  }
+}
+  
+
 export default function TeamMemberBio({ params }) {
   const member = teamMembers[params.slug];
   

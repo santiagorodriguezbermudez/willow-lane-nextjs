@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import './globals.css'
 import Link from 'next/link'
+import Head from 'next/head'
+
 import Image from 'next/image'
 import { HomeIcon, UserGroupIcon, ChartBarIcon, PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -12,6 +14,10 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     setIsMounted(true)
+    const link = document.createElement('link')
+    link.rel = 'icon'
+    link.href = '/favicon.ico'
+    document.head.appendChild(link)
   }, [])
 
   const toggleMobileMenu = () => {
@@ -43,6 +49,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <body className="flex flex-col min-h-screen">
         <header className="bg-primary text-white">
           <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
