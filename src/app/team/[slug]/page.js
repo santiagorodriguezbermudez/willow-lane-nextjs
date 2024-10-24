@@ -13,7 +13,8 @@ const teamMembers = {
         "Since July 2021, Mr. Weil has served as a member of the Board of Directors of Stryve Foods. He has previously served on the boards of Lazydays Holdings, Inc., Tecnoglass, and All Market, Inc. (d/b/a Runa).",
         "Earlier in his career, from 2008 to 2013, Mr. Weil headed International Business Development for Scientific Games Corporation in Latin America. From 2004 to 2006, he was an associate and then Junior Partner at Business, Strategies, & Insight.",
         "Luke started his career as an investment banker at Bear Stearns. He holds a B.A. from Brown University and an M.B.A. from Columbia Business School."
-      ]
+      ],
+      photo: '/team/Luke Weil Photo.jpg'
     },
     'george-pang': {
       name: 'George Pang',
@@ -28,7 +29,8 @@ const teamMembers = {
         "He has also worked as a consultant focused on financial planning and analysis for various industries, including retail and financial services.",
         "Earlier in his career, he was an Associate in the Investment Banking division of Credit Suisse, focusing on private equity, high yield, and leveraged lending products.",
         "Mr. Pang holds an A.B. in Economics from the University of Michigan, Ann Arbor, as well as an M.B.A. with a concentration in Finance from the Anderson School at UCLA. He is also a CFA Charterholder."
-      ]
+      ],
+      photo: '/team/George Peng Photo.jpg'
     },
     'maya-hernandez': {
       name: 'Maya Hernandez',
@@ -42,7 +44,8 @@ const teamMembers = {
         "Prior to this, Ms. Hernandez served as senior currency strategist for Latin America at HSBC Securities (USA) from 2008 to 2015.",
         "From 2005 to 2008, she was the lead macro-economic and political analyst for HSBC, covering the Andean region.",
         "Previously, Ms. Hernandez was a public policy associate at the Council of the Americas, a forum dedicated to contemporary political, social and economic issues in Latin America."
-      ]
+      ],
+      photo: '/team/Maya Hernandez Photo.jpg'
     },
     'mauricio-orellana': {
       name: 'Mauricio Orellana',
@@ -58,7 +61,7 @@ const teamMembers = {
         "From 2000 to 2005, Mr. Orellana was a Vice President and Managing Director at Cori Capital Partners, L.P., a financial services firm.",
         "Prior to this, he served as Investment Officer for Emerging Markets Partnership and Inter-American Investment Corporation.",
         "Mr. Orellana received a degree in electrical engineering from the Universidad Central de Venezuela and an M.B.A. from the Instituto de Education Superior de Administración."
-      ]
+      ],
     },
     'robert-stevens': {
       name: 'Robert Stevens',
@@ -73,7 +76,8 @@ const teamMembers = {
         "Prior to that, he served as Senior Associate at Lorne Weil, Inc., a boutique corporate development and strategy consulting firm.",
         "Mr. Stevens holds an MBA from Columbia University where he was a Lawrence Wein fellow, an M.S. in Economics from the University of Wisconsin, and a B.A. in Economics from the University of Rhode Island.",
         "He served on the Board of Directors of Bluefly, Inc. and Axsys Technologies (Audit and Governance), an optoelectronics supplier which was sold to General Dynamics."
-      ]
+      ],
+      photo: '/team/Robert Stevens Photo.jpg'
     },
     'rayn-steinberg': {
       name: 'Rayn Steinberg',
@@ -86,7 +90,8 @@ const teamMembers = {
         "Mr. Steinberg has an extensive history of financial and entrepreneurial success with nearly two decades of experience.",
         "Prior to founding Arca, Mr. Steinberg co-founded an asset management company, WisdomTree, where he was responsible for raising capital, creating intellectual property, and building and overseeing a sales team responsible for raising $50 billion in ETF assets under management.",
         "Mr. Steinberg holds a Bachelor of Science degree in Economics from The Wharton School of the University of Pennsylvania."
-      ]
+      ],
+      photo: '/team/Rayne Steinberg Photo.jpg'
     }
   };
 
@@ -120,11 +125,11 @@ export default function TeamMemberBio({ params }) {
         <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
           <div className="w-48 h-48 relative mb-6 md:mb-0 md:mr-8">
             <Image
-              src="/profile.webp"
+              src={member.photo || "/profile.webp"}
               alt={member.name}
               fill
-              style={{ objectFit: 'cover' }}
-              className="rounded-full"
+              className="brightness-75 object-cover object-top rounded-full"
+              priority
             />
           </div>
           <div>

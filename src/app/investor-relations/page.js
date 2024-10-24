@@ -24,7 +24,7 @@ export default function InvestorRelations() {
         </p>
         <div className="text-center">
           <a 
-            href="https://www.sec.gov/edgar/searchedgar/companysearch.html" 
+            href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002032379&owner=include&count=40" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded transition-colors duration-200"

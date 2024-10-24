@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        haboro: ['Haboro Contrast', 'serif'],
+        haboro: ['Roboto', 'sans-serif'],
       },
       colors: {
         primary: '#094B30',

@@ -3,82 +3,136 @@
 import { useState, useEffect } from 'react'
 import './globals.css'
 import Link from 'next/link'
-import Head from 'next/head'
-
 import Image from 'next/image'
 import { HomeIcon, UserGroupIcon, ChartBarIcon, PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { motion, AnimatePresence } from 'framer-motion'
+
+// Animated Link Component
+const AnimatedLink = ({ href, children, className }) => (
+  <Link href={href}>
+    <motion.div
+      className={className}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    >
+      {children}
+    </motion.div>
+  </Link>
+)
+
+// Navigation Items Component
+const NavItems = () => (
+  <>
+    <li>
+      <AnimatedLink 
+        href="/" 
+        className="flex items-center hover:text-accent transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10"
+      >
+        <HomeIcon className="w-5 h-5 mr-2" />
+        <span>Home</span>
+      </AnimatedLink>
+    </li>
+    <li>
+      <AnimatedLink 
+        href="/team" 
+        className="flex items-center hover:text-accent transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10"
+      >
+        <UserGroupIcon className="w-5 h-5 mr-2" />
+        <span>Team</span>
+      </AnimatedLink>
+    </li>
+    <li>
+      <AnimatedLink 
+        href="/investor-relations" 
+        className="flex items-center hover:text-accent transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10"
+      >
+        <ChartBarIcon className="w-5 h-5 mr-2" />
+        <span>Investor Relations</span>
+      </AnimatedLink>
+    </li>
+  </>
+)
 
 export default function RootLayout({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
-    const link = document.createElement('link')
-    link.rel = 'icon'
-    link.href = '/favicon.ico'
-    document.head.appendChild(link)
+    
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
-  const NavItems = () => (
-    <>
-      <li>
-        <Link href="/" className="flex items-center hover:text-secondary transition-colors">
-          <HomeIcon className="w-5 h-5 mr-1" />
-          <span>Home</span>
-        </Link>
-      </li>
-      <li>
-        <Link href="/team" className="flex items-center hover:text-secondary transition-colors">
-          <UserGroupIcon className="w-5 h-5 mr-1" />
-          <span>Team</span>
-        </Link>
-      </li>
-      <li>
-        <Link href="/investor-relations" className="flex items-center hover:text-secondary transition-colors">
-          <ChartBarIcon className="w-5 h-5 mr-1" />
-          <span>Investor Relations</span>
-        </Link>
-      </li>
-    </>
-  )
-
   return (
-    <html lang="en">
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      <body className="flex flex-col min-h-screen">
-        <header className="bg-primary text-white">
-          <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" className="flex items-center">
-              <Image src="/logo.png" alt="WLAC Logo" width={150} height={150} />
-            </Link>
-            <ul className="hidden md:flex space-x-6">
-              <NavItems />
-            </ul>
-            <button onClick={toggleMobileMenu} className="md:hidden">
-              {isMobileMenuOpen ? (
-                <XMarkIcon className="w-6 h-6" />
-              ) : (
-                <Bars3Icon className="w-6 h-6" />
-              )}
-            </button>
-          </nav>
-          {isMounted && isMobileMenuOpen && (
-            <div className="md:hidden">
-              <ul className="flex flex-col items-center space-y-4 py-4">
+    <html lang="en" className="scroll-smooth">
+      <body className="flex flex-col min-h-screen font-haboro bg-gray-50">
+        <motion.header
+          className={`fixed w-full z-50 transition-all duration-500 ${
+            scrolled 
+              ? 'bg-primary/95 backdrop-blur-lg shadow-lg' 
+              : 'bg-primary/80 backdrop-blur-sm'
+          }`}
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        >
+          <nav className="container mx-auto px-4 pb-0 pt-1">
+            <div className="flex justify-between items-center">
+              <AnimatedLink href="/" className="relative z-10">
+                <div className="relative w-[150px] h-[150px]">
+                  <Image 
+                    src="/logo.png" 
+                    alt="WLAC Logo" 
+                    fill
+                    className="object-contain"
+                    priority 
+                  />
+                </div>
+              </AnimatedLink>
+
+              <ul className="hidden md:flex items-center space-x-2 text-white">
                 <NavItems />
               </ul>
-            </div>
-          )}
-        </header>
 
-        <main className="flex-grow">
+              <motion.button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden relative z-10 p-2 rounded-full hover:bg-white/10 text-white"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {isMobileMenuOpen ? (
+                  <XMarkIcon className="w-6 h-6" />
+                ) : (
+                  <Bars3Icon className="w-6 h-6" />
+                )}
+              </motion.button>
+            </div>
+          </nav>
+
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="md:hidden absolute w-full bg-primary/95 backdrop-blur-lg"
+              >
+                <ul className="flex flex-col items-center space-y-4 py-6 text-white">
+                  <NavItems />
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.header>
+
+        <main className="flex-grow pt-[150px]">
           {children}
         </main>
 
