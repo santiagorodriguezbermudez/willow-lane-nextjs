@@ -1,138 +1,76 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { HomeIcon, UserGroupIcon, ChartBarIcon, PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { motion, AnimatePresence } from 'framer-motion'
-
-// Animated Link Component
-const AnimatedLink = ({ href, children, className }) => (
-  <Link href={href}>
-    <motion.div
-      className={className}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 400, damping: 17 }}
-    >
-      {children}
-    </motion.div>
-  </Link>
-)
+import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 // Navigation Items Component
-const NavItems = () => (
+const NavItems = ({ mobile }) => (
   <>
-    <li>
-      <AnimatedLink 
-        href="/" 
-        className="flex items-center hover:text-accent transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10"
-      >
-        <HomeIcon className="w-5 h-5 mr-2" />
-        <span>Home</span>
-      </AnimatedLink>
-    </li>
-    <li>
-      <AnimatedLink 
-        href="/team" 
-        className="flex items-center hover:text-accent transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10"
-      >
-        <UserGroupIcon className="w-5 h-5 mr-2" />
-        <span>Team</span>
-      </AnimatedLink>
-    </li>
-    <li>
-      <AnimatedLink 
-        href="/investor-relations" 
-        className="flex items-center hover:text-accent transition-all duration-300 px-4 py-2 rounded-full hover:bg-white/10"
-      >
-        <ChartBarIcon className="w-5 h-5 mr-2" />
-        <span>Investor Relations</span>
-      </AnimatedLink>
-    </li>
+    <li><Link href="/" className="hover:text-primary">Home</Link></li>
+    {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
+    <li><Link href="/team" className="hover:text-primary">Team</Link></li>
+    {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
+    <li><Link href="/investor-relations" className="hover:text-primary">Investor Relations</Link></li>
+    {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
   </>
 )
 
 export default function RootLayout({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    setIsMounted(true)
-    
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="flex flex-col min-h-screen font-haboro bg-gray-50">
-        <motion.header
-          className={`fixed w-full z-50 transition-all duration-500 ${
-            scrolled 
-              ? 'bg-primary/95 backdrop-blur-lg shadow-lg' 
-              : 'bg-primary/80 backdrop-blur-sm'
-          }`}
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        >
-          <nav className="container mx-auto px-4 pb-0 pt-1">
-            <div className="flex justify-between items-center">
-              <AnimatedLink href="/" className="relative z-10">
-                <div className="relative w-[150px] h-[150px]">
+    <html lang="en">
+      <body className="flex flex-col min-h-screen bg-white font-['Roboto',sans-serif]">
+        <header className="fixed w-full z-50 bg-white border-b">
+          <nav className="container mx-auto px-4">
+            <div className="flex justify-between items-center h-20">
+              {/* Logo */}
+              <Link href="/" className="relative">
+                <div className="relative w-[250px] h-[120px]">
                   <Image 
                     src="/logo.png" 
-                    alt="WLAC Logo" 
+                    alt="Company Logo" 
                     fill
                     className="object-contain"
                     priority 
                   />
                 </div>
-              </AnimatedLink>
+              </Link>
 
-              <ul className="hidden md:flex items-center space-x-2 text-white">
+              {/* Desktop Navigation */}
+              <ul className="hidden md:flex items-center space-x-6 text-sm font-medium">
                 <NavItems />
               </ul>
 
-              <motion.button
+              {/* Mobile Menu Button */}
+              <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden relative z-10 p-2 rounded-full hover:bg-white/10 text-white"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="md:hidden p-2 text-gray-600"
+                aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? (
                   <XMarkIcon className="w-6 h-6" />
                 ) : (
                   <Bars3Icon className="w-6 h-6" />
                 )}
-              </motion.button>
+              </button>
             </div>
-          </nav>
 
-          <AnimatePresence>
+            {/* Mobile Menu */}
             {isMobileMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="md:hidden absolute w-full bg-primary/95 backdrop-blur-lg"
-              >
-                <ul className="flex flex-col items-center space-y-4 py-6 text-white">
-                  <NavItems />
+              <div className="md:hidden bg-white border-t">
+                <ul className="flex flex-col py-4 px-4">
+                  <NavItems mobile={true} />
                 </ul>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </motion.header>
+          </nav>
+        </header>
 
-        <main className="flex-grow pt-[150px]">
+        <main className="flex-grow pt-20">
           {children}
         </main>
 
