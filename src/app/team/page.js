@@ -30,21 +30,21 @@ export default function Team() {
     {
       name: "Luke Weil",
       title: "Chief Executive Officer and Chairman of the Board",
-      description: "Luke serves as our CEO and Chairman since July 2024. He has extensive experience in SPACs, having led Andina Acquisition Corporation III, II, and I, resulting in successful business combinations.",
+      description: "Luke serves as our CEO and Chairman. He previously led Andina Acquisition Corporation I, II, and III, resulting in successful business combinations with Tecnoglass, Lazydays R.V, and Stryve Foods, respectively.",
       link: "/team/luke-weil",
       photo: "/team/Luke Weil Photo.jpg"
     },
     {
       name: "George Pang",
       title: "Chief Financial Officer",
-      description: "George has served as our CFO since July 2024. He brings valuable experience from his roles as CFO in previous SPACs and his background in finance at various companies.",
+      description: "George is CFO. Prior to this he served as CFO of Leisure Acquisition Corp. and as VP of Finance at Inspired Entertainment. He brings extensive experience in financial planning and analysis across various industries.",
       link: "/team/george-pang",
       photo: "/team/George Peng Photo.jpg"
     },
     {
       name: "Maya Hernandez",
       title: "Treasurer and Director of Business Development",
-      description: "Maya has been our Treasurer and Director of Business Development since July 2024. She has a strong background in early-stage investments and currency strategy.",
+      description: "Maya is our Treasurer and our Director of Business Development. She was an investor in Andina I and part of the successful Management Team of Andina II and III. She brings extensive experience in SPACs operations and macro-economic analysis.",
       link: "/team/maya-hernandez",
       photo: "/team/Maya Hernandez Photo.jpg"
     }
@@ -54,21 +54,20 @@ export default function Team() {
     {
       name: "Mauricio Orellana",
       title: "Director",
-      description: "Mauricio has been a Director since our formation. He has extensive experience as a financial consultant in Latin America and has served on multiple boards.",
+      description: "Mauricio has extensive M&A experience across a variety of sectors and has served on multiple boards, including Stryve Foods. He served as CFO of Andina II and III.",
       link: "/team/mauricio-orellana"
-
     },
     {
       name: "Robert Stevens",
       title: "Director",
-      description: "Bob has been a Director since our formation. He brings decades of experience as a strategy and corporate development consultant across various industries.",
+      description: "Bob brings decades of experience as a strategy and corporate development consultant across various industries, including gaming, leisure, and retail. He previously served as VP of Corporate Strategy at Scientific Games Corporation.",
       link: "/team/robert-stevens",
       photo: "/team/Robert Stevens Photo.jpg"
     },
     {
       name: "Rayn Steinberg",
       title: "Director",
-      description: "Rayn has been a Director since our formation. He is the CEO of Arca Capital Management LLC and has a strong background in asset management and entrepreneurship.",
+      description: "Rayn is the CEO of Arca Capital Management LLC and brings extensive experience in asset management and entrepreneurship. He co-founded WisdomTree and has a strong background in securities structuring and risk management.",
       link: "/team/rayn-steinberg",
       photo: "/team/Rayne Steinberg Photo.jpg"
     }

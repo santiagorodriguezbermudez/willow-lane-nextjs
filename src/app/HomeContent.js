@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import TeamAccordion from './components/TeamAccordion'
@@ -49,15 +50,15 @@ const companies = [
 
 function PastPerformanceSection() {
   return (
-    <section className="pt-12 pb-8 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
+      <div className="absolute inset-0 bg-whitefrom-gray-50 to-white"></div>
       
       {/* Main content */}
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Section header with animated underline */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-4">Past Performance</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">PAST PERFORMANCE</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </div>
         
@@ -76,7 +77,38 @@ function PastPerformanceSection() {
   );
 }
 
+// Add new component for governance documents
+const GovernanceDocument = ({ title, pdfUrl }) => (
+  <div className="bg-gray-50 hover:bg-gray-100 transition-colors p-6 rounded-lg mb-4">
+    <a 
+      href={pdfUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex justify-between items-center"
+    >
+      <span className="text-primary font-medium">{title}</span>
+      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      </svg>
+    </a>
+  </div>
+);
+
 export default function Home() {
+  // Add scroll handling for hash links
+  useEffect(() => {
+    // Check if there's a hash in the URL when the component mounts
+    if (window.location.hash === '#governance') {
+      const element = document.getElementById('governance')
+      if (element) {
+        // Add a slight delay to ensure smooth scrolling after page load
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+      }
+    }
+  }, [])
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -90,15 +122,15 @@ export default function Home() {
         />
         
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-primary/90">
+        <div className="absolute inset-0 bg-primary/70">
           {/* Content container */}
           <div className="max-w-4xl mx-auto px-4 h-4/5 flex flex-col justify-center items-center text-center">
-            <h1 className="text-white text-xl md:text-5xl font-bold mb-4">
-              WELCOME TO WILLOW LANE ACQUISITION CORPORATION
+            <h1 className="text-white text-xl md:text-5xl font-bold mb-4 pb-4 border-b-2 border-secondary">
+              WILLOW LANE ACQUISITION CORPORATION
             </h1>
             
             <p className="text-white text-xl mb-8">
-              Shaping the Future of Business
+            Willow Lane Acquisition Corporation is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
             </p>
           </div>
         </div>
@@ -108,32 +140,32 @@ export default function Home() {
           <div className="mx-4 bg-white rounded-lg shadow-xl">
             <div className="px-4 md:px-8 py-8 md:py-12 text-center">
               <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
-                Willow Lane Acquisition Corporation is a U.S. publicly traded NASDAQ company (WLACU) formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses. Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders. In XXX, we raised $126.5 million in equity via an initial public offering (&quot;IPO&quot;). We intend to invest in one or more businesses with valuations below $1 billion, positive EBITDA, sustainable cash flow, and experienced management teams. We do not intend to acquire startup companies, companies with speculative business plans, or companies that are excessively leveraged. We seek to leverage on the broad sector expertise of our management team and look to invest in businesses in consumer goods, gaming and leisure, industrial manufacturing, including domestic and international candidates, reflecting our collective transaction history. However, we may invest in a business in any high growth industry.
+                Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders. 
+
+We intend to focus on businesses with valuations below $1 billion, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
+
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Spacer for About card overlap */}
-      <div className="h-32 bg-white"></div>
-
       <PastPerformanceSection />
 
       {/* Team Accordion Section */}
-      <section className="py-8 px-4">
+      <section className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary mb-4">Our Team</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+          <h2 className="text-white text-3xl font-bold mb-4">OUR TEAM</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-white to-secondary mx-auto rounded-full"></div>
         </div>
         <TeamAccordion />
       </section>
 
       {/* Investor Relations Section - Modernized */}
-      <section className="py-8 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Investor Relations</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">INVESTOR RELATIONS</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </div>
           
@@ -160,6 +192,43 @@ export default function Home() {
               </div>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Governance Documents Section */}
+      <section id="governance" className="py-16 bg-white scroll-mt-24">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary mb-4">GOVERNANCE DOCUMENTS</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <GovernanceDocument 
+              title="Audit Committee Charter" 
+              pdfUrl="https://s204.q4cdn.com/667065784/files/doc_downloads/governance/EQV-Audit-Committee-Charter-Final-Form-110217475-5.pdf" 
+            />
+            <GovernanceDocument 
+              title="Code of Business Conduct and Ethics" 
+              pdfUrl="https://s204.q4cdn.com/667065784/files/doc_downloads/governance/EQV-Audit-Committee-Charter-Final-Form-110217475-5.pdf" 
+            />
+            <GovernanceDocument 
+              title="Corporate Governance Guidelines" 
+              pdfUrl="https://s204.q4cdn.com/667065784/files/doc_downloads/governance/EQV-Audit-Committee-Charter-Final-Form-110217475-5.pdf" 
+            />
+            <GovernanceDocument 
+              title="Compensation Committee Charter" 
+              pdfUrl="https://s204.q4cdn.com/667065784/files/doc_downloads/governance/EQV-Audit-Committee-Charter-Final-Form-110217475-5.pdf" 
+            />
+            <GovernanceDocument 
+              title="Insider Trading Policy" 
+              pdfUrl="https://s204.q4cdn.com/667065784/files/doc_downloads/governance/EQV-Audit-Committee-Charter-Final-Form-110217475-5.pdf" 
+            />
+            <GovernanceDocument 
+              title="Nominating Committee Charter" 
+              pdfUrl="https://s204.q4cdn.com/667065784/files/doc_downloads/governance/EQV-Audit-Committee-Charter-Final-Form-110217475-5.pdf" 
+            />
+          </div>
         </div>
       </section>
     </div>
