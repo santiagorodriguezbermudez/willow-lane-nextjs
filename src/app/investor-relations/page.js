@@ -15,24 +15,15 @@ export default function InvestorRelations() {
         </p>
       </header>
 
-      <div className="bg-gray-100 rounded-lg p-8 max-w-3xl mx-auto">
-        <div className="flex items-center justify-center mb-6">
-          <DocumentTextIcon className="w-16 h-16 text-primary" />
-        </div>
-        <p className="text-center mb-8 text-lg">
-          Stay informed about our financial performance and corporate actions by accessing our SEC filings.
-        </p>
-        <div className="text-center">
-          <a 
-            href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002032379&owner=include&count=40" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded transition-colors duration-200"
-          >
-            <DocumentTextIcon className="w-5 h-5 mr-2" />
-            View SEC Filings
-          </a>
-        </div>
+      <div className="text-center">
+        <a 
+          href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002032379&owner=include&count=40" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-secondary hover:text-primary font-bold py-3 px-6 transition-colors duration-200"
+        >
+          View SEC Filings
+        </a>
       </div>
     </div>
   )

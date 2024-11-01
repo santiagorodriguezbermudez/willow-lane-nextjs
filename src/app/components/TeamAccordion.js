@@ -11,12 +11,12 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
         className="w-full py-4 px-6 flex items-center justify-between hover:bg-gray-50"
         onClick={onClick}
       >
-        <div className="flex flex-col items-start">
+        <div className="flex justify-start gap-4 flex-col md:flex-row items-start md:items-center ">
           <span className="font-bold text-lg text-gray-900">{name}</span>
-          <span className="text-sm text-gray-600">{title}</span>
+          <span className="text-sm text-left text-gray-600 whitespace-wrap p-1">{title}</span>
         </div>
         <ChevronDownIcon 
-          className={`w-5 h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 min-w-5 min-h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       
@@ -79,7 +79,6 @@ export default function TeamAccordion() {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Team</h2>
       <div className="border-t border-gray-200 rounded-lg overflow-hidden">
         {teamMembers.map((member, index) => (
           <TeamMemberAccordion

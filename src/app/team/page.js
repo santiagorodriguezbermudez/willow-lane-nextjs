@@ -13,7 +13,7 @@ const TeamMember = ({ name, title, description, link, photo }) => (
         src={photo || '/profile.webp'}
         alt={name}
         fill
-        className="brightness-75 object-cover object-top"
+        className="object-cover object-top"
         priority
       />
     </div>

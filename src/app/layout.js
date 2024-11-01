@@ -9,11 +9,11 @@ import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/
 // Navigation Items Component
 const NavItems = ({ mobile }) => (
   <>
-    <li><Link href="/" className="hover:text-primary">Home</Link></li>
+    <li><Link href="/" className="hover:text-primary">HOME</Link></li>
     {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
-    <li><Link href="/team" className="hover:text-primary">Team</Link></li>
+    <li><Link href="/team" className="hover:text-primary">TEAM</Link></li>
     {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
-    <li><Link href="/investor-relations" className="hover:text-primary">Investor Relations</Link></li>
+    <li><Link href="/investor-relations" className="hover:text-primary">INVESTOR RELATIONS</Link></li>
     {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
   </>
 )
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
                 </p>
                 <p className="flex items-center justify-center md:justify-end">
                   <EnvelopeIcon className="w-5 h-5 mr-2" />
-                  <a href="mailto:maya@willowac.com" className="hover:underline">maya@willowac.com</a>
+                  <a href="mailto:maya@willowac.com" className="hover:underline">info@willowac.com</a>
                 </p>
               </div>
             </div>

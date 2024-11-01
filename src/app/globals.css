@@ -14,4 +14,10 @@ body {
   font-family: 'Haboro Contrast', serif;
 }
 
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+}
+
 /* Add any additional custom styles here */
