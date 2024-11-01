@@ -14,7 +14,6 @@ const NavItems = ({ mobile }) => (
     <li><Link href="/team" className="hover:text-primary">TEAM</Link></li>
     {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
     <li><Link href="/investor-relations" className="hover:text-primary">INVESTOR RELATIONS</Link></li>
-    {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
   </>
 )
 
