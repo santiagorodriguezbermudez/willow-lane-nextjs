@@ -16,19 +16,19 @@ const teamMembers = {
       ],
       photo: '/team/Luke Weil Photo.jpg'
     },
-    'george-pang': {
-      name: 'George Pang',
+    'george-peng': {
+      name: 'George Peng',
       title: 'Chief Financial Officer',
       bio: [
         "George has served as our Chief Financial Officer since our formation in July 2024.",
-        "Previously, Mr. Pang served as Chief Financial Officer of Leisure Acquisition Corp., a SPAC that acquired Ensysce Biosciences, Inc., from December 2017 until June 2021.",
+        "Previously, Mr. Peng served as Chief Financial Officer of Leisure Acquisition Corp., a SPAC that acquired Ensysce Biosciences, Inc., from December 2017 until June 2021.",
         "He served as Vice President of Finance at Inspired Entertainment, Inc., from December 2016 to February 2022.",
-        "From February 2022 until July 2024, Mr. Pang pursued various consulting activities.",
+        "From February 2022 until July 2024, Mr. Peng pursued various consulting activities.",
         "Prior to this, he was Chief Financial Officer of Hydra Industries Acquisition Corp., a SPAC that acquired Inspired Entertainment, Inc., from August 2015 until December 2016.",
-        "Mr. Pang was a consultant to Scientific Games Corporation from May 2013 to April 2014, where he assisted in its integration of the acquisition of WMS Industries.",
+        "Mr. Peng was a consultant to Scientific Games Corporation from May 2013 to April 2014, where he assisted in its integration of the acquisition of WMS Industries.",
         "He has also worked as a consultant focused on financial planning and analysis for various industries, including retail and financial services.",
         "Earlier in his career, he was an Associate in the Investment Banking division of Credit Suisse, focusing on private equity, high yield, and leveraged lending products.",
-        "Mr. Pang holds an A.B. in Economics from the University of Michigan, Ann Arbor, as well as an M.B.A. with a concentration in Finance from the Anderson School at UCLA. He is also a CFA Charterholder."
+        "Mr. Peng holds an A.B. in Economics from the University of Michigan, Ann Arbor, as well as an M.B.A. with a concentration in Finance from the Anderson School at UCLA. He is also a CFA Charterholder."
       ],
       photo: '/team/George Peng Photo.jpg'
     },
@@ -62,6 +62,7 @@ const teamMembers = {
         "Prior to this, he served as Investment Officer for Emerging Markets Partnership and Inter-American Investment Corporation.",
         "Mr. Orellana received a degree in electrical engineering from the Universidad Central de Venezuela and an M.B.A. from the Instituto de Education Superior de Administración."
       ],
+      photo: '/team/Mauricio Orellana Photo.jpg'
     },
     'robert-stevens': {
       name: 'Robert Stevens',
@@ -79,11 +80,11 @@ const teamMembers = {
       ],
       photo: '/team/Robert Stevens Photo.jpg'
     },
-    'rayn-steinberg': {
-      name: 'Rayn Steinberg',
+    'rayne-steinberg': {
+      name: 'Rayne Steinberg',
       title: 'Director',
       bio: [
-        "Rayn has been a Director of our Board since our formation.",
+        "Rayne has been a Director of our Board since our formation.",
         "Since November 2019, Mr. Steinberg has been Chief Executive Officer at Arca Capital Management LLC.",
         "Mr. Steinberg leads the company's strategic direction and is responsible for securities structuring and risk management.",
         "Since May 2018, he has been the Co-Founder and Chief Executive Officer of Praesidium Partners, Inc. (parent of Arca Capital Management LLC) and of Arca Investment Management, Inc., the investment adviser.",

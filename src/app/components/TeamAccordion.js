@@ -12,9 +12,9 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
         onClick={onClick}
       >
         <div className="flex justify-start gap-4 flex-col md:flex-row items-start md:items-center">
-          <span className="font-bold text-lg text-white">{name}</span>
+          <span className="font-bold text-3xl text-white">{name}</span>
           <span className="text-white/50">|</span>
-          <span className="text-sm text-left text-white/80 whitespace-wrap p-1">{title}</span>
+          <span className="text-base text-left text-white/80 whitespace-wrap p-1">{title}</span>
         </div>
         <ChevronDownIcon 
           className={`w-5 h-5 min-w-5 min-h-5 transform transition-transform duration-300 ease-in-out text-white ${isOpen ? 'rotate-180' : ''}`}
@@ -49,10 +49,10 @@ export default function TeamAccordion() {
       slug: "luke-weil"
     },
     {
-      name: "George Pang",
+      name: "George Peng",
       title: "Chief Financial Officer",
-      description: "George is CFO. Prior to this he served as CFO of Leisure Acquisition Corp. and as VP of Finance at Inspired Entertainment. He brings extensive experience in financial planning and analysis across various industries.",
-      slug: "george-pang"
+      description: "George serves as our CFO. Prior to this he served as CFO of Leisure Acquisition Corp. and as VP of Finance at Inspired Entertainment. He brings extensive experience in financial planning and analysis across various industries.",
+      slug: "george-peng"
     },
     {
       name: "Maya Hernandez",
@@ -73,10 +73,10 @@ export default function TeamAccordion() {
       slug: "robert-stevens"
     },
     {
-      name: "Rayn Steinberg",
+      name: "Rayne Steinberg",
       title: "Director",
-      description: "Rayn is the CEO of Arca Capital Management LLC and brings extensive experience in asset management and entrepreneurship. He co-founded WisdomTree and has a strong background in securities structuring and risk management.",
-      slug: "rayn-steinberg"
+      description: "Rayne is the CEO of Arca Capital Management LLC and brings extensive experience in asset management and entrepreneurship. He co-founded WisdomTree and has a strong background in securities structuring and risk management.",
+      slug: "rayne-steinberg"
     }
   ]
 

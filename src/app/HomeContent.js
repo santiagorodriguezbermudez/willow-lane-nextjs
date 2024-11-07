@@ -31,16 +31,16 @@ const companies = [
     logo: '/company-logos/tecnoglass.png'
   },
   {
+    name: 'INSPIRED',
+    logo: '/company-logos/inspired.png'
+  },
+  {
     name: 'LAZYDAYS RV',
     logo: '/company-logos/lazydays.png'
   },
   {
     name: 'STRYVE',
     logo: '/company-logos/stryve.png'
-  },
-  {
-    name: 'INSPIRED',
-    logo: '/company-logos/inspired.png'
   },
   {
     name: 'ENSYSCE',
@@ -58,7 +58,7 @@ function PastPerformanceSection() {
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Section header with animated underline */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-4">PAST PERFORMANCE</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">PAST TRANSACTIONS</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </div>
         
@@ -117,7 +117,7 @@ export default function Home() {
           src="/hero-image.webp"
           alt="City skyline with park"
           fill
-          className="object-cover"
+          className="object-cover brightness-[0.5]"
           priority
         />
         
@@ -125,11 +125,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-primary/70">
           {/* Content container */}
           <div className="max-w-4xl mx-auto px-4 h-4/5 flex flex-col justify-center items-center text-center">
-            <h1 className="text-white text-xl md:text-5xl font-bold mb-4 pb-4 border-b-2 border-secondary">
-              WILLOW LANE ACQUISITION CORPORATION
+            <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 pb-4">
+              WILLOW LANE <br />ACQUISITION CORPORATION
             </h1>
             
-            <p className="text-white text-xl mb-8">
+            <p className="text-white text-2xl mb-8">
             Willow Lane Acquisition Corporation is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
             </p>
           </div>
@@ -139,7 +139,7 @@ export default function Home() {
         <div className="absolute top-[135%] md:top-[115%] -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-5xl">
           <div className="mx-4 bg-white rounded-lg shadow-xl">
             <div className="px-4 md:px-8 py-8 md:py-12 text-center">
-              <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
+              <p className="text-gray-600 max-w-3xl mx-auto text-xl">
                 Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders. 
 
 We intend to focus on businesses with valuations below $1 billion, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.

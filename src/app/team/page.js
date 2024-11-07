@@ -18,8 +18,8 @@ const TeamMember = ({ name, title, description, link, photo }) => (
       />
     </div>
     <div className="p-6 flex-grow">
-      <h3 className="text-xl font-semibold text-primary mb-2">{name}</h3>
-      <p className="text-gray-600 font-medium mb-3">{title}</p>
+      <h3 className="text-3xl font-semibold text-primary mb-2">{name}</h3>
+      <p className="text-gray-600 text-xl mb-3">{title}</p>
       <p className="text-gray-500 mb-4 line-clamp-3">{description}</p>
       <span className="text-secondary font-semibold hover:underline mt-auto">Read More</span>
     </div>
@@ -35,10 +35,10 @@ export default function Team() {
       photo: "/team/Luke Weil Photo.jpg"
     },
     {
-      name: "George Pang",
+      name: "George Peng",
       title: "Chief Financial Officer",
       description: "George is CFO. Prior to this he served as CFO of Leisure Acquisition Corp. and as VP of Finance at Inspired Entertainment. He brings extensive experience in financial planning and analysis across various industries.",
-      link: "/team/george-pang",
+      link: "/team/george-peng",
       photo: "/team/George Peng Photo.jpg"
     },
     {
@@ -55,7 +55,8 @@ export default function Team() {
       name: "Mauricio Orellana",
       title: "Director",
       description: "Mauricio has extensive M&A experience across a variety of sectors and has served on multiple boards, including Stryve Foods. He served as CFO of Andina II and III.",
-      link: "/team/mauricio-orellana"
+      link: "/team/mauricio-orellana",
+      photo: "/team/Mauricio Orellana Photo.jpg"
     },
     {
       name: "Robert Stevens",
@@ -65,7 +66,7 @@ export default function Team() {
       photo: "/team/Robert Stevens Photo.jpg"
     },
     {
-      name: "Rayn Steinberg",
+      name: "Rayne Steinberg",
       title: "Director",
       description: "Rayn is the CEO of Arca Capital Management LLC and brings extensive experience in asset management and entrepreneurship. He co-founded WisdomTree and has a strong background in securities structuring and risk management.",
       link: "/team/rayn-steinberg",
