@@ -58,7 +58,7 @@ function PastPerformanceSection() {
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Section header with animated underline */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-primary mb-4">PAST TRANSACTIONS</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">PAST TRANSACTIONS</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </div>
         
@@ -86,7 +86,7 @@ const GovernanceDocument = ({ title, pdfUrl }) => (
       rel="noopener noreferrer"
       className="flex justify-between items-center"
     >
-      <span className="text-primary font-medium">{title}</span>
+      <span className="text-xl text-primary font-medium">{title}</span>
       <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
       </svg>
@@ -125,12 +125,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-primary/70">
           {/* Content container */}
           <div className="max-w-4xl mx-auto px-4 h-4/5 flex flex-col justify-center items-center text-center">
-            <h1 className="text-white text-3xl md:text-5xl font-bold mb-4 pb-4">
+            <h1 className="text-white text-4xl md:text-4xl font-bold mb-4 pb-4">
               WILLOW LANE <br />ACQUISITION CORPORATION
             </h1>
             
-            <p className="text-white text-2xl mb-8">
-            Willow Lane Acquisition Corporation is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
+            <p className="text-white text-xl mb-8">
+              Willow Lane Acquisition Corporation is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
             </p>
           </div>
         </div>
@@ -139,11 +139,10 @@ export default function Home() {
         <div className="absolute top-[135%] md:top-[115%] -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-5xl">
           <div className="mx-4 bg-white rounded-lg shadow-xl">
             <div className="px-4 md:px-8 py-8 md:py-12 text-center">
-              <p className="text-gray-600 max-w-3xl mx-auto text-xl">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders. 
 
-We intend to focus on businesses with valuations below $1 billion, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
-
+                We intend to focus on businesses with valuations below $1 billion, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
               </p>
             </div>
           </div>
@@ -155,7 +154,7 @@ We intend to focus on businesses with valuations below $1 billion, positive EBIT
       {/* Team Accordion Section */}
       <section className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white">
         <div className="text-center mb-12">
-          <h2 className="text-white text-3xl font-bold mb-4">OUR TEAM</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">OUR TEAM</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-white to-secondary mx-auto rounded-full"></div>
         </div>
         <TeamAccordion />
@@ -165,7 +164,7 @@ We intend to focus on businesses with valuations below $1 billion, positive EBIT
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">INVESTOR RELATIONS</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">INVESTOR RELATIONS</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </div>
           
@@ -178,7 +177,7 @@ We intend to focus on businesses with valuations below $1 billion, positive EBIT
                 <h3 className="text-xl font-semibold text-primary mb-2">
                   Access Financial Information
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-xl text-gray-600">
                     View SEC fillings for Willow Lane Acquisition Corporation
                 </p>
               </div>
@@ -199,7 +198,7 @@ We intend to focus on businesses with valuations below $1 billion, positive EBIT
       <section id="governance" className="py-16 bg-white scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">GOVERNANCE DOCUMENTS</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">GOVERNANCE DOCUMENTS</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </div>
           
