@@ -11,10 +11,10 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
         className="w-full py-4 px-6 flex items-center justify-between hover:bg-white/10 transition-colors"
         onClick={onClick}
       >
-        <div className="flex justify-start gap-4 flex-col md:flex-row items-start md:items-center">
-          <span className="font-bold text-3xl text-white">{name}</span>
+        <div className="flex justify-start gap-4 flex-row items-start items-center">
+          <span className="font-bold text-xl md:text-3xl text-white whitespace-nowrap">{name}</span>
           <span className="text-white/50">|</span>
-          <span className="text-base text-left text-white/80 whitespace-wrap p-1">{title}</span>
+          <span className="text-xs md:text-base text-left text-white/80 whitespace-wrap p-1">{title}</span>
         </div>
         <ChevronDownIcon 
           className={`w-5 h-5 min-w-5 min-h-5 transform transition-transform duration-300 ease-in-out text-white ${isOpen ? 'rotate-180' : ''}`}
