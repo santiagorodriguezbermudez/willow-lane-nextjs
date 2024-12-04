@@ -93,6 +93,15 @@ const teamMembers = {
         "Mr. Steinberg holds a Bachelor of Science degree in Economics from The Wharton School of the University of Pennsylvania."
       ],
       photo: '/team/Rayne Steinberg Photo.jpg'
+    },
+    'lorne-weil': {
+      name: 'Lorne Weil',
+      title: 'Special Advisor',
+      bio: [
+        "Lorne is a Special Advisor to Willow Lane. He is a retired investment banker with over 30 years of experience in the financial services industry. He was a Managing Director at Goldman Sachs and Co. and a Senior Managing Director at JPMorgan Chase & Co.",
+        "He was a Managing Director at Goldman Sachs and Co. and a Senior Managing Director at JPMorgan Chase & Co." 
+      ],
+      photo: '/team/Lorne Weil Photo.jpg'
     }
   };
 

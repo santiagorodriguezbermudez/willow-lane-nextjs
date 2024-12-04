@@ -77,6 +77,12 @@ export default function TeamAccordion() {
       title: "Director",
       description: "Rayne is the CEO of Arca Capital Management LLC and brings extensive experience in asset management and entrepreneurship. He co-founded WisdomTree and has a strong background in securities structuring and risk management.",
       slug: "rayne-steinberg"
+    },
+    {
+      name: "Lorne Weil",
+      title: "Special Advisor",
+      description: "Lorne is a Special Advisor to Willow Lane. He is a retired investment banker with over 30 years of experience in the financial services industry. He was a Managing Director at Goldman Sachs and Co. and a Senior Managing Director at JPMorgan Chase & Co.",
+      slug: "lorne-weil"
     }
   ]
 

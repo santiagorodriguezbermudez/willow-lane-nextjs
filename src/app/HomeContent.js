@@ -138,7 +138,7 @@ export default function Home() {
                   Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
                 </span>
                 <span className="block">
-                  We intend to focus on businesses with valuations below $1 billion, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
+                  We intend to focus on businesses with valuations above $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
                 </span>
               </p>
             </div>
@@ -215,6 +215,18 @@ export default function Home() {
             <GovernanceDocument 
               title="Insider Trading Policy" 
               pdfUrl="/documents/Willow Lane - Insider Trading Policy.pdf" 
+            />
+            <GovernanceDocument 
+              title="Code of Ethics" 
+              pdfUrl="/documents/Willow Lane - Code of Ethics.pdf" 
+            />
+            <GovernanceDocument 
+              title="Compensation Committee Charter" 
+              pdfUrl="/documents/Willow Lane - Compensation Committee Charter.pdf" 
+            />
+            <GovernanceDocument 
+              title="Audit Committee Charter" 
+              pdfUrl="/documents/Willow Lane - Audit Committee Charter.pdf" 
             />
           </div>
         </div>
