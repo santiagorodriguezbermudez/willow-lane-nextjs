@@ -80,8 +80,8 @@ export default function TeamAccordion() {
     },
     {
       name: "Lorne Weil",
-      title: "Special Advisor",
-      description: "Lorne is a Special Advisor to Willow Lane. He is a retired investment banker with over 30 years of experience in the financial services industry. He was a Managing Director at Goldman Sachs and Co. and a Senior Managing Director at JPMorgan Chase & Co.",
+      title: "Advisor",
+      description: "Lorne serves as an advisor to the Company. Mr. Weil has served as the Executive Chairman of Inspired Entertainment, Inc. (“Inspired”) since the consummation of its business combination that created the current Inspired Entertainment, Inc. in December 2016. Mr. Weil was the co-sponsor and founder of Inspired’s predecessor, Hydra Industries, and served as its Chairman and Chief Executive Officer since its formation in 2014.",
       slug: "lorne-weil"
     }
   ]

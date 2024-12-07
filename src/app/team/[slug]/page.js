@@ -96,10 +96,9 @@ const teamMembers = {
     },
     'lorne-weil': {
       name: 'Lorne Weil',
-      title: 'Special Advisor',
+      title: 'Advisor',
       bio: [
-        "Lorne is a Special Advisor to Willow Lane. He is a retired investment banker with over 30 years of experience in the financial services industry. He was a Managing Director at Goldman Sachs and Co. and a Senior Managing Director at JPMorgan Chase & Co.",
-        "He was a Managing Director at Goldman Sachs and Co. and a Senior Managing Director at JPMorgan Chase & Co." 
+        "Lorne serves as an advisor to the Company. Mr. Weil has served as the Executive Chairman of Inspired Entertainment, Inc. (“Inspired”) since the consummation of its business combination that created the current Inspired Entertainment, Inc. in December 2016. Mr. Weil was the co-sponsor and founder of Inspired’s predecessor, Hydra Industries, and served as its Chairman and Chief Executive Officer since its formation in 2014. Mr. Weil has been a principal of Hydra Management, an investment vehicle he formed, since September 2014. Mr. Weil was Chairman of the Board of Scientific Games Corporation (and its predecessor, Autotote Corporation) from October 1991 to November 2013.  In 2011, Mr. Weil was the sponsor and Chairman of the Board of Andina I, and is currently the Chairman of its successor entity, Tecnoglass Inc. Mr. Weil served as Executive Chairman of Leisure Acquisition, a SPAC, from September 2017 until it completed a business combination in June 2021. Mr. Weil also served as the Chief Executive Officer of Scientific Games Corporation from 1992 to 2008 and from November 2010 to November 2013 and as the President from August 1997 to June 2005. Prior to joining Scientific Games, Mr. Weil was President of Lorne Weil, Inc. from 1979 to November 1992. From 1974 to 1979, Mr. Weil was Vice President — Corporate Development at General Instrument Corporation. From 1970 to 1974, Mr. Weil was a manager with the Boston Consulting Group. Mr. Weil received his undergraduate degree from the University of Toronto, an M.S. degree from the London School of Economics and an M.B.A. from Columbia University.",
       ],
       photo: '/team/Lorne Weil Photo.jpg'
     }
