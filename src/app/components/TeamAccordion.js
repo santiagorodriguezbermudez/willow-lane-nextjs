@@ -8,7 +8,7 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
   return (
     <div className="border-b border-white/20 text-white">
       <button
-        className="w-full py-4 px-4 md:px-6 flex items-center justify-between hover:bg-white/10 transition-colors"
+        className="w-full py-4 flex items-center justify-between hover:bg-white/10 transition-colors"
         onClick={onClick}
       >
         <div className="flex-1 flex items-center justify-start gap-4">

@@ -138,8 +138,8 @@ export default function Home() {
       </section>
 
       {/* Investor Relations Section - Modernized */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto border-primary border-b pb-4">
+      <section className="container mx-auto py-16 bg-white">
+        <div className="px-4 border-primary border-b pb-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-thin text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
@@ -168,7 +168,7 @@ export default function Home() {
 
       {/* Governance Documents Section */}
       <section id="governance" className="py-16 bg-primary text-white scroll-mt-24">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-thin text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
