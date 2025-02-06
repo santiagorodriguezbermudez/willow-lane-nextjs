@@ -6,22 +6,14 @@ import Image from 'next/image'
 import TeamAccordion from './components/TeamAccordion'
 
 const CompanyCard = ({ name, logo }) => (
-  <div className="group relative px-10 py-0 md:p-0">
-    <div className="relative backdrop-blur-sm bg-white/90 rounded-2xl p-4 md:p-8 
-                  shadow-lg hover:shadow-2xl transition-all duration-500 ease-out
-                  border border-gray-100 hover:border-secondary overflow-hidden">
-      <div className="relative z-10">
-        <div className="w-full aspect-[3/2] relative flex items-center justify-center">
-          <Image
-            src={logo}
-            alt={`${name} logo`}
-            fill
-            className="object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-1 rounded-lg p-2 md:p-0"
-            priority
-          />
-        </div>
-      </div>
-    </div>
+  <div className="aspect-[3/2] relative flex w-full md:w-auto md:flex-1 items-center justify-center">
+    <Image
+      src={logo}
+      alt={`${name} logo`}
+      fill
+      className="object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-1 rounded-lg p-2 md:p-0"
+      priority
+    />
   </div>
 );
 
@@ -50,14 +42,13 @@ const companies = [
 
 function PastPerformanceSection() {
   return (
-    <section className="py-8 md:py-16 relative overflow-hidden">
+    <section className="py-8 md:py-16 relative overflow-hidden px-20">
       <div className="text-center mb-8 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">PAST TRANSACTIONS</h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        <h2 className="text-3xl md:text-4xl font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="relative mx-auto">
+        <div className="flex flex-wrap justify-center gap-8">
           {companies.map((company) => (
             <CompanyCard
               key={company.name}
