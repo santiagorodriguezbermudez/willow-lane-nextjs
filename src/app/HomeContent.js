@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import TeamAccordion from './components/TeamAccordion'
+import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 
 const CompanyCard = ({ name, logo }) => (
   <div className="aspect-[3/2] relative flex w-full md:w-auto md:flex-1 items-center justify-center">
@@ -64,17 +65,15 @@ function PastPerformanceSection() {
 
 // Add new component for governance documents
 const GovernanceDocument = ({ title, pdfUrl }) => (
-  <div className="bg-gray-50 hover:bg-gray-100 transition-colors p-6 rounded-lg mb-4">
+  <div className="text-white border-white border-b pb-4">
     <a 
       href={pdfUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="flex justify-between items-center"
     >
-      <span className="text-xl text-primary font-medium">{title}</span>
-      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-      </svg>
+      <span className="text-xl text-white font-thin uppercase">{title}</span>
+      <ChevronDownIcon className="w-6 h-6 font-thin" />
     </a>
   </div>
 );
@@ -140,19 +139,17 @@ export default function Home() {
 
       {/* Investor Relations Section - Modernized */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-4xl mx-auto border-primary border-b pb-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">INVESTOR RELATIONS</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <h2 className="text-4xl font-thin text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
           
           <Link 
             href="/investor-relations" 
-            className="block bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
           >
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-thin text-gray-800 mb-2 uppercase">
                   Access Financial Information
                 </h3>
                 <p className="text-xl text-gray-600">
@@ -160,11 +157,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-4 md:mt-0">
-                <span className="inline-flex items-center text-secondary hover:text-primary transition-colors duration-200 font-medium">
-                  Learn More
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                <span className="inline-flex items-center text-gray-800 hover:text-primary transition-colors duration-200 font-medium">
+                  <ChevronRightIcon className="w-8 h-8" />
                 </span>
               </div>
             </div>
@@ -173,11 +167,10 @@ export default function Home() {
       </section>
 
       {/* Governance Documents Section */}
-      <section id="governance" className="py-16 bg-white scroll-mt-24">
+      <section id="governance" className="py-16 bg-primary text-white scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">GOVERNANCE DOCUMENTS</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <h2 className="text-4xl font-thin text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">

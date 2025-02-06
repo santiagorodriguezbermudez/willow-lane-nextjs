@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-white font-['Roboto',sans-serif]">
-        <header className="w-full bg-white">
+        <header className="w-full bg-white border-b border-primary">
           <nav className="container mx-auto">
             <div className="flex justify-between items-center h-48">
               {/* Logo */}
@@ -73,24 +73,20 @@ export default function RootLayout({ children }) {
           {children}
         </main>
 
-        <footer className="bg-primary text-white py-8">
-          <div className="container mx-auto px-4">
+        <footer className="bg-white text-primary py-8 border-t border-primary">
+          <div className="container mx-auto px-4 flex items-center justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="mb-4 md:mb-0 text-center md:text-left">
-                <p>&copy; 2024 Willow Lane Acquisition Corporation. All rights reserved.</p>
-              </div>
               <div className="text-center md:text-right">
-                <p className="font-semibold mb-2">Contact Information:</p>
-                <p className="flex items-center justify-center md:justify-end mb-1">
-                  <PhoneIcon className="w-5 h-5 mr-2" />
+                <p className="font-thin uppercase text-2xl mb-2">Contact Information:</p>
+                <p className="flex flex-colitems-center justify-center md:justify-start mb-1">
                   <span>(646) 565-3861</span>
                 </p>
-                <p className="flex items-center justify-center md:justify-end">
-                  <EnvelopeIcon className="w-5 h-5 mr-2" />
+                <p className="flex items-center justify-center md:justify-start">
                   <a href="mailto:maya@willowac.com" className="hover:underline">info@willowac.com</a>
                 </p>
               </div>
             </div>
+            <Image src="/logo_completo.jpg" alt="Company Logo" width={200} height={200} />
           </div>
         </footer>
       </body>
