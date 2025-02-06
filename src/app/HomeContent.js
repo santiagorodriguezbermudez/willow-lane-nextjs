@@ -106,45 +106,36 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[450px] md:mb-60 mb-[550px]">
-        <Image
-          src="/hero-image.webp"
-          alt="City skyline with park"
-          fill
-          className="object-cover brightness-[0.5]"
-          priority
-        />
-        
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-primary/70">
-          {/* Content container */}
-          <div className="max-w-4xl mx-auto px-4 pt-12 h-4/5 flex flex-col justify-center items-center text-center">
-            <h1 className="text-white text-2xl md:text-5xl font-bold mb-6 md:mb-4 pb-4">
-              WILLOW LANE <br />ACQUISITION CORPORATION
+      <section className="relative bg-primary py-16 md:py-24">
+        {/* Background Icon */}
+        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20">
+          <Image
+            src="/green-icon.png"
+            alt="Decorative background"
+            fill
+            className="object-contain object-right"
+            priority
+          />
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="w-3/4 text-white space-y-6">
+            <h1 className="text-3xl md:text-4xl font-bold uppercase">
+              Willow Lane Acquisition Corporation
             </h1>
-            
-            <p className="text-white text-lg md:text-2xl mb-8 px-4 md:px-0">
+            <p className="text-lg md:text-xl">
               Willow Lane Acquisition Corporation is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
+            </p>
+            <p className="text-lg md:text-xl">
+              Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
+            </p>
+            <p className="text-lg md:text-xl">
+              We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
             </p>
           </div>
         </div>
-
-        {/* About Section - Overlapping Card */}
-        <div className="absolute top-[150%] md:top-[115%] -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-5xl">
-          <div className="mx-4 bg-white rounded-lg shadow-xl">
-            <div className="px-4 md:px-8 py-6 md:py-12 text-center">
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto space-y-4">
-                <span className="block mb-4">
-                  Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
-                </span>
-                <span className="block">
-                  We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
       <PastPerformanceSection />
 
