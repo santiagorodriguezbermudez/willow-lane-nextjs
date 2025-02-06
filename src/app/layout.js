@@ -9,11 +9,11 @@ import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/
 // Navigation Items Component
 const NavItems = ({ mobile }) => (
   <>
-    <li><Link href="/" className="hover:text-primary">HOME</Link></li>
-    {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
-    <li><Link href="/investor-relations" className="hover:text-primary">INVESTOR RELATIONS</Link></li>
-    {!mobile && <li className="h-4 w-px bg-gray-300"></li>}
-    <li><Link href="/#governance" className="hover:text-primary">GOVERNANCE DOCUMENTS</Link></li>
+    <li><Link href="/" className="text-primary font-regular">HOME</Link></li>
+    {!mobile && <li className="h-4 w-px "></li>}
+    <li><Link href="/investor-relations" className="text-primary font-regular">INVESTOR RELATIONS</Link></li>
+    {!mobile && <li className="h-4 w-px "></li>}
+    <li><Link href="/#governance" className="text-primary font-regular">GOVERNANCE DOCUMENTS</Link></li>
   </>
 )
 
@@ -23,12 +23,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-white font-['Roboto',sans-serif]">
-        <header className="fixed w-full z-50 bg-white border-b">
-          <nav className="container mx-auto px-4">
-            <div className="flex justify-between items-center h-20">
+        <header className="w-full bg-white">
+          <nav className="container mx-auto">
+            <div className="flex justify-between items-center h-48">
               {/* Logo */}
               <Link href="/" className="relative">
-                <div className="relative w-[250px] h-[120px]">
+                <div className="relative w-[450px] h-[350px]">
                   <Image 
                     src="/logo.png" 
                     alt="Company Logo" 
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
               </Link>
 
               {/* Desktop Navigation */}
-              <ul className="hidden md:flex items-center space-x-6 text-sm font-medium">
+              <ul className="hidden md:flex items-center space-x-6 text-3xl font-thin">
                 <NavItems />
               </ul>
 
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
 
-        <main className="flex-grow pt-20">
+        <main className="flex-grow">
           {children}
         </main>
 
