@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             <div className="flex justify-between items-center h-48">
               {/* Logo */}
               <Link href="/" className="relative">
-                <div className="relative w-[450px] h-[350px]">
+                <div className="relative w-[200px] h-[200px] md:w-[450px] md:h-[350px]">
                   <Image 
                     src="/logo.png" 
                     alt="Company Logo" 

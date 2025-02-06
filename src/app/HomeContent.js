@@ -108,7 +108,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-primary py-16 md:py-24">
         {/* Background Icon */}
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20">
+        <div className="absolute right-0 top-0 w-full md:w-1/2 h-full opacity-20">
           <Image
             src="/green-icon.png"
             alt="Decorative background"
@@ -120,7 +120,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="w-3/4 text-white space-y-6">
+          <div className="w-full md:w-3/4 text-center md:text-left text-white space-y-6">
             <h1 className="text-3xl md:text-4xl font-bold uppercase">
               Willow Lane Acquisition Corporation
             </h1>
