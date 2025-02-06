@@ -132,19 +132,20 @@ export default function TeamMemberBio({ params }) {
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="w-48 h-48 relative flex-shrink-0">
+          <div className="w-72 h-72 relative flex-shrink-0">
             <Image
               src={member.photo || "/profile.webp"}
               alt={member.name}
               fill
-              className="object-cover object-top rounded-full ring-2 ring-secondary"
+              className="object-cover object-center grayscale"
               priority
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-3xl font-bold text-primary mb-2">{member.name}</h1>
-            <h2 className="text-xl text-secondary mb-4">{member.title}</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h1 className="text-3xl font-thin uppercase text-primary mb-2">{member.name}</h1>
+            <h2 className="text-xl text-gray-600 italic font-thin mb-4">{member.title}</h2>
+            <p className="h-1 border-b border-primary w-1/2 mb-4"></p>
+            <p className="text-gray-400 leading-relaxed">
               {member.bio.join(' ')}
             </p>
           </div>

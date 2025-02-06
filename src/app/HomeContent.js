@@ -4,24 +4,17 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import TeamAccordion from './components/TeamAccordion'
+import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 
 const CompanyCard = ({ name, logo }) => (
-  <div className="group relative px-10 py-0 md:p-0">
-    <div className="relative backdrop-blur-sm bg-white/90 rounded-2xl p-4 md:p-8 
-                  shadow-lg hover:shadow-2xl transition-all duration-500 ease-out
-                  border border-gray-100 hover:border-secondary overflow-hidden">
-      <div className="relative z-10">
-        <div className="w-full aspect-[3/2] relative flex items-center justify-center">
-          <Image
-            src={logo}
-            alt={`${name} logo`}
-            fill
-            className="object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-1 rounded-lg p-2 md:p-0"
-            priority
-          />
-        </div>
-      </div>
-    </div>
+  <div className="aspect-[3/2] relative flex w-full md:w-auto md:flex-1 items-center justify-center">
+    <Image
+      src={logo}
+      alt={`${name} logo`}
+      fill
+      className="object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-1 rounded-lg p-2 md:p-0"
+      priority
+    />
   </div>
 );
 
@@ -50,14 +43,13 @@ const companies = [
 
 function PastPerformanceSection() {
   return (
-    <section className="py-8 md:py-16 relative overflow-hidden">
+    <section className="py-8 md:py-16 relative overflow-hidden px-20">
       <div className="text-center mb-8 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">PAST TRANSACTIONS</h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        <h2 className="text-3xl md:text-4xl font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="relative mx-auto">
+        <div className="flex flex-wrap justify-center gap-8">
           {companies.map((company) => (
             <CompanyCard
               key={company.name}
@@ -73,17 +65,15 @@ function PastPerformanceSection() {
 
 // Add new component for governance documents
 const GovernanceDocument = ({ title, pdfUrl }) => (
-  <div className="bg-gray-50 hover:bg-gray-100 transition-colors p-6 rounded-lg mb-4">
+  <div className="text-white border-white border-b pb-4">
     <a 
       href={pdfUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="flex justify-between items-center"
     >
-      <span className="text-xl text-primary font-medium">{title}</span>
-      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-      </svg>
+      <span className="text-xl text-white font-thin uppercase">{title}</span>
+      <ChevronDownIcon className="w-6 h-6 font-thin" />
     </a>
   </div>
 );
@@ -106,72 +96,60 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[450px] md:mb-60 mb-[550px]">
-        <Image
-          src="/hero-image.webp"
-          alt="City skyline with park"
-          fill
-          className="object-cover brightness-[0.5]"
-          priority
-        />
-        
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-primary/70">
-          {/* Content container */}
-          <div className="max-w-4xl mx-auto px-4 pt-12 h-4/5 flex flex-col justify-center items-center text-center">
-            <h1 className="text-white text-2xl md:text-5xl font-bold mb-6 md:mb-4 pb-4">
-              WILLOW LANE <br />ACQUISITION CORPORATION
+      <section className="relative bg-primary py-16 md:py-24">
+        {/* Background Icon */}
+        <div className="absolute right-0 top-0 w-full md:w-1/2 h-full opacity-20">
+          <Image
+            src="/green-icon.png"
+            alt="Decorative background"
+            fill
+            className="object-contain object-right"
+            priority
+          />
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="w-full md:w-3/4 text-center md:text-left text-white space-y-6">
+            <h1 className="text-3xl md:text-4xl font-bold uppercase">
+              Willow Lane Acquisition Corporation
             </h1>
-            
-            <p className="text-white text-lg md:text-2xl mb-8 px-4 md:px-0">
+            <p className="text-lg md:text-xl">
               Willow Lane Acquisition Corporation is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
+            </p>
+            <p className="text-lg md:text-xl">
+              Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
+            </p>
+            <p className="text-lg md:text-xl">
+              We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
             </p>
           </div>
         </div>
-
-        {/* About Section - Overlapping Card */}
-        <div className="absolute top-[150%] md:top-[115%] -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-5xl">
-          <div className="mx-4 bg-white rounded-lg shadow-xl">
-            <div className="px-4 md:px-8 py-6 md:py-12 text-center">
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto space-y-4">
-                <span className="block mb-4">
-                  Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
-                </span>
-                <span className="block">
-                  We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
       <PastPerformanceSection />
 
       {/* Team Accordion Section */}
       <section className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">OUR TEAM</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-white to-secondary mx-auto rounded-full"></div>
+          <h2 className="text-4xl text-white font-thin mb-4">OUR TEAM</h2>
         </div>
         <TeamAccordion />
       </section>
 
       {/* Investor Relations Section - Modernized */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-4xl mx-auto border-primary border-b pb-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">INVESTOR RELATIONS</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <h2 className="text-4xl font-thin text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
           
           <Link 
             href="/investor-relations" 
-            className="block bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
           >
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-thin text-gray-800 mb-2 uppercase">
                   Access Financial Information
                 </h3>
                 <p className="text-xl text-gray-600">
@@ -179,11 +157,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-4 md:mt-0">
-                <span className="inline-flex items-center text-secondary hover:text-primary transition-colors duration-200 font-medium">
-                  Learn More
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                <span className="inline-flex items-center text-gray-800 hover:text-primary transition-colors duration-200 font-medium">
+                  <ChevronRightIcon className="w-8 h-8" />
                 </span>
               </div>
             </div>
@@ -192,11 +167,10 @@ export default function Home() {
       </section>
 
       {/* Governance Documents Section */}
-      <section id="governance" className="py-16 bg-white scroll-mt-24">
+      <section id="governance" className="py-16 bg-primary text-white scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">GOVERNANCE DOCUMENTS</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <h2 className="text-4xl font-thin text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
