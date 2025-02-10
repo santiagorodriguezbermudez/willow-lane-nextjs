@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col min-h-screen bg-white font-source-sans">
         <header className="w-full bg-white border-b border-primary py-4">
           <nav className="container mx-auto">
-            <div className="flex justify-start gap-4 items-center h-48">
+            <div className="flex justify-between md:justify-start px-2 md:px-0 gap-4 items-center h-48">
               {/* Logo */}
               <Link href="/" className="relative">
                 <div className="relative w-[200px] h-[200px] md:w-[450px] md:h-[350px]">
