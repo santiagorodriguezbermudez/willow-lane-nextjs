@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
 
-        <footer className="bg-white text-primary py-8 border-t border-primary">
+        <footer className="bg-white text-primary border-t border-primary">
           <div className="container mx-auto px-4 flex items-center justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
                 </p>
               </div>
             </div>
-            <Image src="/logo_completo.jpg" alt="Company Logo" width={200} height={200} />
+            <Image src="/logo_completo.jpg" alt="Company Logo" width={300} height={300} />
           </div>
         </footer>
       </body>

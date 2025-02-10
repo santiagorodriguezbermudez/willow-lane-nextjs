@@ -132,16 +132,16 @@ export default function Home() {
       {/* Team Accordion Section */}
       <section id="team" className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white">
         <div className="text-center mb-12">
-          <h2 className="text-4xl text-white font-thin mb-4">OUR TEAM</h2>
+          <h2 className="text-3xl text-white font-haboro mb-4">OUR TEAM</h2>
         </div>
-        <TeamAccordion />
+        <TeamAccordion /> 
       </section>
 
       {/* Investor Relations Section - Modernized */}
       <section className="container mx-auto py-16 bg-white">
         <div className="px-4 border-primary border-b pb-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-thin text-primary mb-4">INVESTOR RELATIONS</h2>
+            <h2 className="text-3xl font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
           
           <Link 
@@ -153,7 +153,7 @@ export default function Home() {
                   Access Financial Information
                 </h3>
                 <p className="text-xl text-gray-600">
-                    View SEC fillings for Willow Lane Acquisition Corporation
+                    View SEC fillings for WILLOW LANE ACQUISITION CORPORATION
                 </p>
               </div>
               <div className="mt-4 md:mt-0">
@@ -170,7 +170,7 @@ export default function Home() {
       <section id="governance" className="py-16 bg-primary text-white scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-thin text-white mb-4">GOVERNANCE DOCUMENTS</h2>
+            <h2 className="text-3xl font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">

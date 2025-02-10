@@ -6,14 +6,14 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }) => {
   return (
-    <div className="border-b border-white/20 text-white">
+    <div className="border-b border-white text-white">
       <button
         className="w-full py-4 flex items-center justify-between hover:bg-white/10 transition-colors"
         onClick={onClick}
       >
-        <div className="flex-1 flex items-center justify-start gap-4">
-          <span className="font-thin text-xl md:text-3xl text-white uppercase text-left">{name}</span>
-          <span className="font-thin text-lg md:text-3xl text-white/80 md:text-white text-right md:text-left">{title}</span>
+        <div className="flex-1 flex items-center justify-start">
+          <span className="font-thin text-xl md:text-3xl text-white uppercase text-left border-r border-secondary pr-8">{name}</span>
+          <span className="font-thin text-lg md:text-3xl text-white/80 md:text-white text-right md:text-left pl-8">{title}</span>
         </div>
         <ChevronDownIcon 
           className={`w-8 h-8 md:w-10 md:h-10 min-w-8 min-h-8 md:min-w-10 md:min-h-10 font-thin transform transition-transform duration-300 ease-in-out text-white flex-shrink-0 ml-4 ${isOpen ? 'rotate-180' : ''}`}
@@ -25,16 +25,16 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
           <div className="px-4 md:px-6 py-4 bg-white/[0.98]">
             <div>
               <h6 className="text-primary text-2xl md:text-3xl font-thin uppercase">{name}</h6>
-              <p className="text-gray-600 text-base md:text-lg italic font-thin">{title}</p>
+              <p className="text-gray-dark text-base md:text-lg italic font-thin">{title}</p>
               <p className="h-1 border-b border-primary w-1/2 mb-4"></p>
-              <p className="text-gray-600 mb-8 font-thin text-base md:text-lg">{description}</p>
+              <p className="text-gray-dark mb-8 font-thin text-base md:text-lg">{description}</p>
               <p className="h-1 border-b border-primary w-full mb-4"></p>
               <div className="flex justify-end">
                 <Link 
                   href={`/team/${slug}`}
-                  className="text-gray-400 hover:text-primary transition-colors font-medium text-right md:text-left group inline-flex items-center"
+                  className="text-gray-dark hover:text-primary transition-colors font-source-sans text-right md:text-left group inline-flex items-center"
                 >
-                  <span className="text-gray-400 group-hover:text-primary transition-colors font-medium text-sm md:text-base">
+                  <span className="text-gray-dark group-hover:text-primary transition-colors font-source-sans text-sm md:text-base">
                     View Full Profile
                   </span>
                   <ChevronRightIcon className="ml-2 md:ml-3 w-3 h-3 md:w-4 md:h-4 inline group-hover:translate-x-1 transition-transform" />
