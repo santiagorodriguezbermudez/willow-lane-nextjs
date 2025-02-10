@@ -5,15 +5,43 @@ import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import localFont from 'next/font/local'
+
+// Load Haboro Contrast font
+const haboroContrast = localFont({
+  src: '../fonts/HaboroContrast-ExtBk.woff2',
+  variable: '--font-haboro',
+})
+
+// Load Source Sans Variable font
+const sourceSans = localFont({
+  src: [
+    {
+      path: '../fonts/SourceSans3-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/SourceSans3-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/SourceSans3-LightItalic.ttf',
+      weight: '300',
+      style: 'italic',
+    }
+  ],
+  variable: '--font-source-sans',
+})
 
 // Navigation Items Component
 const NavItems = ({ mobile }) => (
   <>
-    <li><Link href="/" className="text-primary font-regular">HOME</Link></li>
-    {!mobile && <li className="h-4 w-px "></li>}
-    <li><Link href="/investor-relations" className="text-primary font-regular">INVESTOR RELATIONS</Link></li>
-    {!mobile && <li className="h-4 w-px "></li>}
-    <li><Link href="/#governance" className="text-primary font-regular">GOVERNANCE DOCUMENTS</Link></li>
+    <li><Link href="/" className="text-primary font-haboro">HOME</Link></li>
+    <li><Link href="/investor-relations" className="text-primary font-haboro">INVESTOR RELATIONS</Link></li>
+    <li><Link href="/#governance" className="text-primary font-haboro">GOVERNANCE DOCUMENTS</Link></li>
+    <li><Link href="/#team" className="text-primary font-haboro">OUR TEAM</Link></li>
   </>
 )
 
@@ -21,11 +49,11 @@ export default function RootLayout({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen bg-white font-['Roboto',sans-serif]">
-        <header className="w-full bg-white border-b border-primary">
+    <html lang="en" className={`${haboroContrast.variable} ${sourceSans.variable}`}>
+      <body className="flex flex-col min-h-screen bg-white font-source-sans">
+        <header className="w-full bg-white border-b border-primary py-4">
           <nav className="container mx-auto">
-            <div className="flex justify-between items-center h-48">
+            <div className="flex justify-start gap-4 items-center h-48">
               {/* Logo */}
               <Link href="/" className="relative">
                 <div className="relative w-[200px] h-[200px] md:w-[450px] md:h-[350px]">
@@ -40,7 +68,7 @@ export default function RootLayout({ children }) {
               </Link>
 
               {/* Desktop Navigation */}
-              <ul className="hidden md:flex items-center space-x-6 text-3xl font-thin">
+              <ul className="hidden md:flex items-center gap-4 text-2xl w-full justify-between">
                 <NavItems />
               </ul>
 
@@ -77,7 +105,7 @@ export default function RootLayout({ children }) {
           <div className="container mx-auto px-4 flex items-center justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
-                <p className="font-thin uppercase text-2xl mb-2">Contact Information:</p>
+                <p className="font-haboro uppercase text-2xl mb-2">Contact Information:</p>
                 <p className="flex flex-colitems-center justify-center md:justify-start mb-1">
                   <span>(646) 565-3861</span>
                 </p>
