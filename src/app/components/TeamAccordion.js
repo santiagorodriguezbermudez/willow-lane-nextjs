@@ -23,7 +23,7 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
       <div className={`active:ring-0 active:outline-none active:ring-offset-0 active:border-0 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-0 transition-all duration-300 ease-in-out bg-white ${isOpen ? 'absolute top-100 left-1/2 w-50 z-[1000] right-[18px] h-auto top-[60px]' : 'hidden'}`}>
         <div className="px-4 md:px-6 py-4">
           <div>
-            <h6 className="text-primary text-2xl md:text-3xl font-thin uppercase">{name}</h6>
+            <h6 className="text-primary text-2xl md:text-3xl font-haboro uppercase">{name}</h6>
             <p className="text-gray-dark text-base md:text-lg italic font-source-sans">{title}</p>
             <p className="h-1 border-b border-primary w-1/2 mb-4"></p>
             <p className="text-gray-dark mb-8 font-source-sans text-base md:text-lg">{description}</p>
