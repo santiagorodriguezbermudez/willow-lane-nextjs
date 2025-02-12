@@ -115,7 +115,7 @@ export default function Home() {
             {/* Content */}
             <div className="container mx-auto relative z-10">
               <div className="w-full md:w-3/5 text-center md:text-left text-white space-y-6">
-                <h1 className="text-3xl uppercase font-haboro">
+                <h1 className="text-3xl uppercase font-light">
                   Willow Lane Acquisition Corporation
                 </h1>
                 <p className="text-2xl font-light  !mt-0">
