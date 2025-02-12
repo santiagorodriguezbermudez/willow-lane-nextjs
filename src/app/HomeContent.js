@@ -21,7 +21,7 @@ const CompanyCard = ({ name, logo }) => (
 const companies = [
   {
     name: 'TECNOGLASS',
-    logo: '/company-logos/tecnoglass.png'
+    logo: '/company-logos/tecnoglass-1.png'
   },
   {
     name: 'INSPIRED',
@@ -43,21 +43,24 @@ const companies = [
 
 function PastPerformanceSection() {
   return (
-    <section className="py-8 relative overflow-hidden px-16">
-      <div className="text-center mb-8 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
-      </div>
-      
-      <div className="relative mx-auto">
-        <div className="flex flex-wrap justify-center gap-8">
-          {companies.map((company) => (
-            <CompanyCard
-              key={company.name}
-              name={company.name}
-              logo={company.logo}
-            />
-          ))}
+    <section className="relative overflow-hidden">
+      <div className='container mx-auto py-16'>
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
         </div>
+        
+        <div className="relative mx-auto">
+          <div className="flex flex-wrap justify-center gap-8">
+            {companies.map((company) => (
+              <CompanyCard
+                key={company.name}
+                name={company.name}
+                logo={company.logo}
+              />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
@@ -96,50 +99,56 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-primary py-16 md:py-16 px-16">
+      <section className="relative bg-primary">
         {/* Background Icon */}
-        <div className="absolute right-0 top-0 w-full md:w-1/2 h-full">
-          <Image
-            src="/logo_hero.png"
-            alt="Decorative background"
-            fill
-            className="object-contain object-right"
-            priority
-          />
+        <div className='container mx-auto py-16'>
+            <div className="absolute right-0 top-0 w-full md:w-1/2 h-full">
+              <Image
+                src="/logo_hero.png"
+                alt="Decorative background"
+                fill
+                className="object-contain object-right"
+                priority
+              />
+            </div>
+
+            {/* Content */}
+            <div className="container mx-auto relative z-10">
+              <div className="w-full md:w-3/5 text-center md:text-left text-white space-y-6">
+                <h1 className="text-3xl uppercase font-haboro">
+                  Willow Lane Acquisition Corporation
+                </h1>
+                <p className="text-2xl font-light  !mt-0">
+                  is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
+                </p>
+                <p className="text-2xl font-light">
+                  Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
+                </p>
+                <p className="text-2xl font-light">
+                  We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
+                </p>
+              </div>
+            </div>
+
         </div>
 
-        {/* Content */}
-        <div className="container mx-auto relative z-10">
-          <div className="w-full md:w-3/5 text-center md:text-left text-white space-y-6">
-            <h1 className="text-3xl uppercase font-haboro">
-              Willow Lane Acquisition Corporation
-            </h1>
-            <p className="text-2xl font-light  !mt-0">
-              is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
-            </p>
-            <p className="text-2xl font-light">
-              Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
-            </p>
-            <p className="text-2xl font-light">
-              We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
-            </p>
-          </div>
-        </div>
       </section>
 
       <PastPerformanceSection />
 
       {/* Team Accordion Section */}
-      <section id="team" className="py-8 bg-gradient-to-b from-primary/95 to-primary text-white relative">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-white font-haboro mb-4">OUR TEAM</h2>
+      <section id="team" className="relative bg-primary">
+        <div className="container mx-auto py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-white font-haboro mb-4">OUR TEAM</h2>
+          </div>
+          <TeamAccordion /> 
         </div>
-        <TeamAccordion /> 
       </section>
 
       {/* Investor Relations Section - Modernized */}
-      <section className="container mx-auto py-8 bg-white">
-        <div className="px-16">
+      <section className="bg-white">
+        <div className="container mx-auto py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
@@ -167,8 +176,8 @@ export default function Home() {
       </section>
 
       {/* Governance Documents Section */}
-      <section id="governance" className="py-8 bg-primary text-white scroll-mt-24">
-        <div className="container mx-auto px-16">
+      <section id="governance" className=" bg-primary text-white">
+        <div className="container mx-auto py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>

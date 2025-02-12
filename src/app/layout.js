@@ -51,14 +51,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${haboroContrast.variable} ${sourceSans.variable}`}>
       <body className="flex flex-col min-h-screen bg-white font-source-sans">
-        <header className="w-full bg-white border-b border-primary py-4">
-          <nav className="container mx-auto">
-            <div className="flex justify-between md:justify-start px-2 md:px-0 gap-4 items-center h-48">
+        <header className="w-full bg-white border-b border-primary">
+          <nav className="container mx-auto py-2">
+            <div className="flex justify-between md:justify-start px-2 md:px-0 gap-24 items-center h-48">
               {/* Logo */}
               <Link href="/" className="relative">
-                <div className="relative w-[200px] h-[200px] md:w-[450px] md:h-[350px]">
+                <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px]">
                   <Image 
-                    src="/logo.png" 
+                    src="/logo_sin_margenes.png" 
                     alt="Company Logo" 
                     fill
                     className="object-contain"
@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
         </main>
 
         <footer className="bg-white text-primary border-t border-primary">
-          <div className="container mx-auto flex items-center justify-between flex-col p-10 md:flex-row md:justify-between md:py-8 md:px-16">
+          <div className="container mx-auto py-16 flex items-center justify-between flex-col md:flex-row md:justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
                 <p className="font-haboro uppercase text-3xl md:text-4xl mb-2">Contact Information:</p>

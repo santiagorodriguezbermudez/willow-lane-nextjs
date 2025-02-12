@@ -95,8 +95,7 @@ export default function TeamAccordion() {
   ]
 
   return (
-    <div className="w-full px-4 md:px-16 mx-auto">
-      <div>
+     <>
         {teamMembers.map((member, index) => (
           <TeamMemberAccordion
             key={member.slug}
@@ -105,7 +104,6 @@ export default function TeamAccordion() {
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
           />
         ))}
-      </div>
-    </div>
+    </>
   )
 } 
