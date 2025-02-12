@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
         </main>
 
         <footer className="bg-white text-primary border-t border-primary">
-          <div className="container mx-auto flex items-center justify-between flex-col p-10 md:flex-row md:justify-between md:px-4">
+          <div className="container mx-auto flex items-center justify-between flex-col p-10 md:flex-row md:justify-between md:py-8 md:px-16">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
                 <p className="font-haboro uppercase text-3xl md:text-4xl mb-2">Contact Information:</p>
