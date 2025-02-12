@@ -46,7 +46,7 @@ function PastPerformanceSection() {
     <section className="relative overflow-hidden">
       <div className='container mx-auto py-16'>
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
+          <h2 className="text-3xl font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
         </div>
         
         <div className="relative mx-auto">
@@ -68,7 +68,7 @@ function PastPerformanceSection() {
 
 // Add new component for governance documents
 const GovernanceDocument = ({ title, pdfUrl }) => (
-  <div className="text-white border-white border-b pb-4">
+  <div className="text-white border-white/50 border-b pb-4">
     <a 
       href={pdfUrl}
       target="_blank"
@@ -76,7 +76,7 @@ const GovernanceDocument = ({ title, pdfUrl }) => (
       className="flex justify-between items-center"
     >
       <span className="text-2xl text-white font-thin uppercase">{title}</span>
-      <ChevronDownIcon className="w-6 h-6 font-thin" />
+      <ChevronDownIcon className="w-14 h-14 text-white/50 [stroke-width:1]" />
     </a>
   </div>
 );
@@ -140,7 +140,7 @@ export default function Home() {
       <section id="team" className="relative bg-primary">
         <div className="container mx-auto py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl text-white font-haboro mb-4">OUR TEAM</h2>
+            <h2 className="text-3xl text-white font-haboro mb-4">OUR TEAM</h2>
           </div>
           <TeamAccordion /> 
         </div>
@@ -150,7 +150,7 @@ export default function Home() {
       <section className="bg-white">
         <div className="container mx-auto py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
+            <h2 className="text-3xl font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
           
           <Link 
@@ -158,10 +158,10 @@ export default function Home() {
           >
             <div className="flex flex-col md:flex-row justify-between items-center border-primary border-b pb-4">
               <div>
-                <h3 className="text-3xl font-haboro text-gray-dark mb-2 uppercase">
+                <h3 className="text-2xl font-haboro text-gray-dark mb-2 uppercase">
                   Access Financial Information
                 </h3>
-                <p className="text-2xl text-gray-dark/80 font-thin">
+                <p className="text-[28px] text-gray-dark/80 font-thin">
                     View SEC fillings for WILLOW LANE ACQUISITION CORPORATION
                 </p>
               </div>
@@ -179,10 +179,10 @@ export default function Home() {
       <section id="governance" className=" bg-primary text-white">
         <div className="container mx-auto py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
+            <h2 className="text-3xl font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-4">
             <GovernanceDocument 
               title="Regulation FD Policy" 
               pdfUrl="/documents/Willow Lane - Regulation FD Policy.pdf" 

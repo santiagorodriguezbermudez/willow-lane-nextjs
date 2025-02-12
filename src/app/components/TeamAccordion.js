@@ -6,17 +6,17 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
 const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }) => {
   return (
-    <div className="border-b border-white text-white relative">
+    <div className="border-b border-white/50 text-white relative">
       <button
         className="w-full py-4 flex items-center justify-between hover:bg-white/10 transition-colors"
         onClick={onClick}
       >
         <div className="flex-1 flex items-center justify-start">
-          <span className="font-haboro text-xl md:text-3xl text-white uppercase text-left border-r border-secondary pr-8">{name}</span>
-          <span className="font-thin text-lg md:text-3xl text-white/80 md:text-white text-right md:text-left pl-8">{title}</span>
+          <span className="font-haboro text-xl md:text-2xl text-white uppercase text-left border-r border-secondary pr-8">{name}</span>
+          <span className="font-thin text-lg md:text-[28px] text-white/80 md:text-white text-right md:text-left pl-8">{title}</span>
         </div>
         <ChevronDownIcon 
-          className={`w-8 h-8 md:w-10 md:h-10 min-w-8 min-h-8 md:min-w-10 md:min-h-10 font-thin transform transition-transform duration-300 ease-in-out text-white flex-shrink-0 ml-4 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-8 h-8 md:w-10 md:h-10 min-w-8 min-h-8 md:min-w-10 md:min-h-10 transform transition-transform duration-300 ease-in-out text-white/50 flex-shrink-0 ml-4 [stroke-width:1] ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       
