@@ -130,7 +130,7 @@ export default function Home() {
       <PastPerformanceSection />
 
       {/* Team Accordion Section */}
-      <section id="team" className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white">
+      <section id="team" className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white relative">
         <div className="text-center mb-12">
           <h2 className="text-3xl text-white font-haboro mb-4">OUR TEAM</h2>
         </div>
