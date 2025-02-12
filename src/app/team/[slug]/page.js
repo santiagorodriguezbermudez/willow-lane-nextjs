@@ -136,8 +136,9 @@ export default function TeamMemberBio({ params }) {
             <Image
               src={member.photo || "/profile.webp"}
               alt={member.name}
-              fill
-              className="object-cover object-center grayscale"
+              width={288}
+              height={288}
+              className="grayscale"
               priority
             />
           </div>
