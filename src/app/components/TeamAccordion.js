@@ -12,7 +12,7 @@ const TeamMemberAccordion = ({ name, title, description, slug, isOpen, onClick }
         onClick={onClick}
       >
         <div className="flex-1 flex items-center justify-start">
-          <span className="font-thin text-xl md:text-3xl text-white uppercase text-left border-r border-secondary pr-8">{name}</span>
+          <span className="font-haboro text-xl md:text-3xl text-white uppercase text-left border-r border-secondary pr-8">{name}</span>
           <span className="font-thin text-lg md:text-3xl text-white/80 md:text-white text-right md:text-left pl-8">{title}</span>
         </div>
         <ChevronDownIcon 
