@@ -38,10 +38,10 @@ const sourceSans = localFont({
 // Navigation Items Component
 const NavItems = ({ mobile }) => (
   <>
-    <li><Link href="/" className="text-primary font-haboro">HOME</Link></li>
-    <li><Link href="/investor-relations" className="text-primary font-haboro">INVESTOR RELATIONS</Link></li>
-    <li><Link href="/#governance" className="text-primary font-haboro">GOVERNANCE DOCUMENTS</Link></li>
-    <li><Link href="/#team" className="text-primary font-haboro">OUR TEAM</Link></li>
+    <li><Link href="/" className="whitespace-nowrap">HOME</Link></li>
+    <li><Link href="/investor-relations" className="whitespace-nowrap">INVESTOR RELATIONS</Link></li>
+    <li><Link href="/#governance" className="whitespace-nowrap">GOVERNANCE DOCUMENTS</Link></li>
+    <li><Link href="/#team" className="whitespace-nowrap">OUR TEAM</Link></li>
   </>
 )
 
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
               </Link>
 
               {/* Desktop Navigation */}
-              <ul className="hidden md:flex items-center gap-4 text-2xl w-full justify-between">
+              <ul className="hidden md:flex md:flex-wrap items-center gap-4 text-2xl w-full justify-between font-haboro text-primary">
                 <NavItems />
               </ul>
 
@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
               <div className="md:hidden bg-white border-t">
-                <ul className="flex flex-col py-4 px-4">
+                <ul className="flex flex-col py-4 px-4 font-haboro text-primary">
                   <NavItems mobile={true} />
                 </ul>
               </div>
@@ -102,19 +102,19 @@ export default function RootLayout({ children }) {
         </main>
 
         <footer className="bg-white text-primary border-t border-primary">
-          <div className="container mx-auto px-4 flex items-center justify-between">
+          <div className="container mx-auto flex items-center justify-between flex-col p-10 md:flex-row md:justify-between md:px-4">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
-                <p className="font-haboro uppercase text-2xl mb-2">Contact Information:</p>
-                <p className="flex flex-colitems-center justify-center md:justify-start mb-1">
-                  <span>(646) 565-3861</span>
+                <p className="font-haboro uppercase text-3xl md:text-4xl mb-2">Contact Information:</p>
+                <p className="flex flex-colitems-center justify-center md:justify-start mb-1 font-source-sans">
+                  <span className="text-2xl">(646) 565-3861</span>
                 </p>
-                <p className="flex items-center justify-center md:justify-start">
-                  <a href="mailto:maya@willowac.com" className="hover:underline">info@willowac.com</a>
+                <p className="flex items-center justify-center md:justify-start font-source-sans text-2xl">
+                  <a href="mailto:info@willowac.com" className="hover:underline">info@willowac.com</a>
                 </p>
               </div>
             </div>
-            <Image src="/logo_completo.jpg" alt="Company Logo" width={300} height={300} />
+            <Image src="/logo_sin_margenes.png" alt="Company Logo" width={300} height={300} />
           </div>
         </footer>
       </body>

@@ -45,7 +45,7 @@ function PastPerformanceSection() {
   return (
     <section className="py-8 relative overflow-hidden px-16">
       <div className="text-center mb-8 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-haboro text-primary mb-4">PAST TRANSACTIONS</h2>
+        <h2 className="text-3xl md:text-4xl font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
       </div>
       
       <div className="relative mx-auto">
@@ -132,7 +132,7 @@ export default function Home() {
       {/* Team Accordion Section */}
       <section id="team" className="py-16 bg-gradient-to-b from-primary/95 to-primary text-white relative">
         <div className="text-center mb-12">
-          <h2 className="text-3xl text-white font-haboro mb-4">OUR TEAM</h2>
+          <h2 className="text-3xl md:text-4xl text-white font-haboro mb-4">OUR TEAM</h2>
         </div>
         <TeamAccordion /> 
       </section>
@@ -141,7 +141,7 @@ export default function Home() {
       <section className="container mx-auto py-16 bg-white">
         <div className="px-4 border-primary border-b pb-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
+            <h2 className="text-3xl md:text-4xl font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
           
           <Link 
@@ -149,10 +149,10 @@ export default function Home() {
           >
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div>
-                <h3 className="text-xl font-thin text-gray-800 mb-2 uppercase">
+                <h3 className="text-3xl font-haboro text-gray-dark mb-2 uppercase">
                   Access Financial Information
                 </h3>
-                <p className="text-xl text-gray-600">
+                <p className="text-2xl text-gray-dark font-thin">
                     View SEC fillings for WILLOW LANE ACQUISITION CORPORATION
                 </p>
               </div>
@@ -170,7 +170,7 @@ export default function Home() {
       <section id="governance" className="py-16 bg-primary text-white scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
+            <h2 className="text-3xl md:text-4xl font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
