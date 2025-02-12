@@ -105,11 +105,11 @@ export default function RootLayout({ children }) {
           <div className="container mx-auto py-16 flex items-center justify-between flex-col md:flex-row md:justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
-                <p className="font-haboro uppercase text-3xl md:text-4xl mb-2">Contact Information:</p>
+                <p className="font-haboro uppercase text-3xl mb-2">Contact Information:</p>
                 <p className="flex flex-colitems-center justify-center md:justify-start mb-1 font-source-sans">
-                  <span className="text-2xl">(646) 565-3861</span>
+                  <span className="text-xl">(646) 565-3861</span>
                 </p>
-                <p className="flex items-center justify-center md:justify-start font-source-sans text-2xl">
+                <p className="flex items-center justify-center md:justify-start font-source-sans text-xl">
                   <a href="mailto:info@willowac.com" className="hover:underline">info@willowac.com</a>
                 </p>
               </div>
