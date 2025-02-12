@@ -72,7 +72,7 @@ const GovernanceDocument = ({ title, pdfUrl }) => (
       rel="noopener noreferrer"
       className="flex justify-between items-center"
     >
-      <span className="text-xl text-white font-thin uppercase">{title}</span>
+      <span className="text-2xl text-white font-thin uppercase">{title}</span>
       <ChevronDownIcon className="w-6 h-6 font-thin" />
     </a>
   </div>
