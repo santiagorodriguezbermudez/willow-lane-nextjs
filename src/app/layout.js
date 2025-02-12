@@ -17,20 +17,10 @@ const haboroContrast = localFont({
 const sourceSans = localFont({
   src: [
     {
-      path: '../fonts/SourceSans3-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/SourceSans3-Regular.ttf',
+      path: '../fonts/SourceSans3-Regular.otf',
       weight: '400',
       style: 'normal',
     },
-    {
-      path: '../fonts/SourceSans3-LightItalic.ttf',
-      weight: '300',
-      style: 'italic',
-    }
   ],
   variable: '--font-source-sans',
 })
