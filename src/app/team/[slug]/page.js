@@ -142,10 +142,10 @@ export default function TeamMemberBio({ params }) {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-3xl font-haboro uppercase text-primary mb-2">{member.name}</h1>
-            <h2 className="text-xl text-gray-600 italic font-thin mb-4">{member.title}</h2>
+            <h1 className="text-[24.7px] font-source-sans font-thin uppercase text-gray-dark mb-2">{member.name}</h1>
+            <h2 className="text-[27.3px] text-gray-600 italic font-thin mb-4">{member.title}</h2>
             <p className="h-1 border-b border-primary w-1/2 mb-4"></p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-dark/80 leading-relaxed text-[20.8px] font-thin">
               {member.bio.join(' ')}
             </p>
           </div>

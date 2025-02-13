@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
               </Link>
 
               {/* Desktop Navigation */}
-              <ul className="hidden md:flex md:flex-wrap items-center gap-4 text-2xl w-full justify-between font-haboro text-primary">
+              <ul className="hidden md:flex md:flex-wrap items-center gap-4 text-[24.7px] w-full justify-between font-haboro text-primary">
                 <NavItems />
               </ul>
 
@@ -92,19 +92,19 @@ export default function RootLayout({ children }) {
         </main>
 
         <footer className="bg-white text-primary border-t border-primary">
-          <div className="container mx-auto py-16 flex items-center justify-between flex-col md:flex-row md:justify-between">
+          <div className="container mx-auto py-8 flex items-center justify-between flex-col md:flex-row md:justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
-                <p className="font-haboro uppercase text-[28px] mb-2">Contact Information:</p>
+                <p className="font-haboro uppercase text-[24.7px] mb-2">Contact Information:</p>
                 <p className="flex flex-colitems-center justify-center md:justify-start mb-1 font-source-sans">
-                  <span className="text-[26.67px]">(646) 565-3861</span>
+                  <span className="text-[26px]">(646) 565-3861</span>
                 </p>
-                <p className="flex items-center justify-center md:justify-start font-source-sans text-[26.67px]">
+                <p className="flex items-center justify-center md:justify-start font-source-sans text-[26px]">
                   <a href="mailto:info@willowac.com" className="hover:underline">info@willowac.com</a>
                 </p>
               </div>
             </div>
-            <Image src="/logo_sin_margenes.png" alt="Company Logo" width={300} height={300} />
+            <Image src="/logo_nav.png" alt="Company Logo" width={300} height={300} />
           </div>
         </footer>
       </body>
