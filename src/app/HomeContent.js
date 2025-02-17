@@ -68,15 +68,15 @@ function PastPerformanceSection() {
 
 // Add new component for governance documents
 const GovernanceDocument = ({ title, pdfUrl }) => (
-  <div className="text-white border-white/50 border-b pb-4">
+  <div className="text-gray-light border-gray-light border-b pb-4">
     <a 
       href={pdfUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="flex justify-between items-center"
     >
-      <span className="text-[23.4px] text-white font-thin uppercase">{title}</span>
-      <ChevronDownIcon className="w-14 h-14 text-white/50 [stroke-width:1]" />
+      <span className="text-[23.4px] text-gray-light font-thin uppercase">{title}</span>
+      <ChevronDownIcon className="w-14 h-14 text-gray-light [stroke-width:1]" />
     </a>
   </div>
 );
@@ -114,17 +114,17 @@ export default function Home() {
 
             {/* Content */}
             
-            <div className="w-full md:w-3/5 text-center md:text-left text-white space-y-6 relative z-10">
-              <h1 className="text-[27.3px] uppercase font-light">
+            <div className="w-full md:w-3/5 text-center md:text-left space-y-6 relative z-10">
+              <h1 className="text-[24.7px] uppercase font-light text-gray-light">
                 Willow Lane Acquisition Corporation
               </h1>
-              <p className="text-[27.3px] font-light  !mt-0">
+              <p className="text-[27.3px] font-light  !mt-0 text-gray-light">
                 is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
               </p>
-              <p className="text-[27.3px] font-light">
+              <p className="text-[27.3px] font-light text-gray-light">
                 Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
               </p>
-              <p className="text-[27.3px] font-light">
+              <p className="text-[27.3px] font-light text-gray-light">
                 We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function Home() {
       <section id="team" className="relative bg-primary">
         <div className="container mx-auto py-16">
           <div className="text-center mb-12">
-            <h2 className="text-[29.9px] text-white font-haboro mb-4">OUR TEAM</h2>
+            <h2 className="text-[29.9px] text-gray-light font-haboro mb-4">OUR TEAM</h2>
           </div>
           <TeamAccordion /> 
         </div>
@@ -161,7 +161,7 @@ export default function Home() {
                 <h3 className="text-[24.7px] font-haboro text-gray-dark mb-2 uppercase">
                   Access Financial Information
                 </h3>
-                <p className="text-[27.3px] text-gray-dark/80 font-thin">
+                <p className="text-[27.3px] text-gray-dark font-thin">
                     View SEC fillings for WILLOW LANE ACQUISITION CORPORATION
                 </p>
               </div>
@@ -176,10 +176,10 @@ export default function Home() {
       </section>
 
       {/* Governance Documents Section */}
-      <section id="governance" className=" bg-primary text-white">
+      <section id="governance" className=" bg-primary text-gray-light">
         <div className="container mx-auto py-16">
           <div className="text-center mb-12">
-            <h2 className="text-[29.9px] font-haboro text-white mb-4">GOVERNANCE DOCUMENTS</h2>
+            <h2 className="text-[29.9px] font-haboro text-gray-light mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-4">
