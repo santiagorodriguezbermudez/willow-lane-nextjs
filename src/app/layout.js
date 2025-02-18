@@ -7,24 +7,6 @@ import Image from 'next/image'
 import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import localFont from 'next/font/local'
 
-// Load Haboro Contrast font
-const haboroContrast = localFont({
-  src: '../fonts/HaboroContrast-ExtBk.woff2',
-  variable: '--font-haboro',
-})
-
-// Load Source Sans Variable font
-const sourceSans = localFont({
-  src: [
-    {
-      path: '../fonts/SourceSans3-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-source-sans',
-})
-
 // Navigation Items Component
 const NavItems = ({ mobile }) => (
   <>
@@ -39,7 +21,7 @@ export default function RootLayout({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <html lang="en" className={`${haboroContrast.variable} ${sourceSans.variable}`}>
+    <html lang="en" >
       <body className="flex flex-col min-h-screen bg-white font-source-sans">
         <header className="w-full bg-white border-b border-primary">
           <nav className="container mx-auto py-2">

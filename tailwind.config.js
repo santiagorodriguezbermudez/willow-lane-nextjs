@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        haboro: ['Haboro Contrast', 'serif'],
-        'source-sans': ['Source Sans Variable', 'sans-serif'],
+        haboro: ['Haboro Contrast', 'sans-serif'],
+        'source-sans': ['"Source Sans 3"', 'sans-serif'],
       },
       colors: {
         primary: '#094B30',
