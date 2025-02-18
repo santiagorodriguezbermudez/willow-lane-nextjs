@@ -106,8 +106,8 @@ export default function Home() {
               <Image
                 src="/logo_hero.png"
                 alt="Decorative background"
-                width={400}
-                height={440}
+                width={500}
+                height={550}
                 priority
               />
             </div>
