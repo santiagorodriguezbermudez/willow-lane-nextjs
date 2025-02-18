@@ -106,8 +106,8 @@ export default function Home() {
               <Image
                 src="/logo_hero.png"
                 alt="Decorative background"
-                width={600}
-                height={660}
+                width={400}
+                height={440}
                 priority
               />
             </div>
@@ -118,14 +118,14 @@ export default function Home() {
               <h1 className="text-[24.7px] uppercase font-haboro text-gray-light">
                 Willow Lane Acquisition Corporation
               </h1>
-              <p className="text-[27.3px] font-light  !mt-0 text-gray-light">
+              <p className="text-[27.3px] font-light !mt-0 text-gray-light">
                 is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
               </p>
               <p className="text-[27.3px] font-light text-gray-light">
-                Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. We have collectively identified and closed five SPAC business combinations, creating value for shareholders.
+                Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. 
               </p>
               <p className="text-[27.3px] font-light text-gray-light">
-                We intend to focus on businesses with valuations greater than $400 million, positive EBITDA, sustainable cash flow, and experienced management teams. While we will not be limited to a particular industry or sector, we plan to focus on consumer goods, gaming and leisure, industrial manufacturing, including domestic and international target company candidates, reflecting our collective transaction history.
+              We have collectively identified and closed five SPAC business combinations, creating value for shareholders. We intend to focus on businesses with valuations of at least $500 million with positive EBITDA, sustainable cash flow, and experienced management teams.
               </p>
             </div>
             
