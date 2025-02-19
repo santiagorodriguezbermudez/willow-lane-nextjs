@@ -44,13 +44,13 @@ const companies = [
 function PastPerformanceSection() {
   return (
     <section className="relative overflow-hidden">
-      <div className='container mx-auto py-16'>
+      <div className='container mx-auto py-8 lg:py-16 px-4 lg:px-0'>
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-[29.9px] font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
+          <h2 className="text-heading-mobile md:text-heading-lg font-haboro font-thin text-primary mb-4">PAST TRANSACTIONS</h2>
         </div>
         
         <div className="relative mx-auto">
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-2 lg:gap-8 px-16 lg:px-0">
             {companies.map((company) => (
               <CompanyCard
                 key={company.name}
@@ -75,8 +75,8 @@ const GovernanceDocument = ({ title, pdfUrl }) => (
       rel="noopener noreferrer"
       className="flex justify-between items-center"
     >
-      <span className="text-[23.4px] text-gray-light font-thin uppercase">{title}</span>
-      <ChevronDownIcon className="w-14 h-14 text-gray-light [stroke-width:1]" />
+      <span className="text-doc-mobile md:text-doc text-gray-light font-thin uppercase">{title}</span>
+      <ChevronDownIcon className="w-4 h-4 lg:w-14 lg:h-14 text-gray-light [stroke-width:1]" />
     </a>
   </div>
 );
@@ -99,33 +99,41 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary">
+      <section className="bg-primary px-4 lg:px-0">
         {/* Background Icon */}
-        <div className='container mx-auto py-16 relative'>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2">
+        <div className='container mx-auto py-8 lg:py-16 relative'>
+            <div className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2">
               <Image
                 src="/logo_hero.png"
                 alt="Decorative background"
-                width={500}
+                width={200}
+                height={200}
+                priority
+              />
+            </div>
+            <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2">
+              <Image
+                src="/logo_hero.png"
+                alt="Decorative background"
+                width={450}
                 height={550}
                 priority
               />
             </div>
-
             {/* Content */}
             
-            <div className="w-full md:w-3/5 text-center md:text-left space-y-6 relative z-10">
-              <h1 className="text-[24.7px] uppercase font-haboro text-gray-light">
+            <div className="w-full md:w-3/5 text-left md:text-left space-y-6 relative z-10">
+              <h1 className="text-heading-mobile md:text-heading uppercase font-haboro text-gray-light">
                 Willow Lane Acquisition Corporation
               </h1>
-              <p className="text-[27.3px] font-light !mt-0 text-gray-light">
+              <p className="text-body-mobile md:text-body font-light !mt-0 text-gray-light">
                 is a blank check company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses.
               </p>
-              <p className="text-[27.3px] font-light text-gray-light">
+              <p className="text-body-mobile md:text-body font-light text-gray-light">
                 Our team has broad sector knowledge and brings a combination of operating, investing, financial and transactional experience. 
               </p>
-              <p className="text-[27.3px] font-light text-gray-light">
-              We have collectively identified and closed five SPAC business combinations, creating value for shareholders. We intend to focus on businesses with valuations of at least $500 million with positive EBITDA, sustainable cash flow, and experienced management teams.
+              <p className="text-body-mobile md:text-body font-light text-gray-light">
+                We have collectively identified and closed five SPAC business combinations, creating value for shareholders. We intend to focus on businesses with valuations of at least $500 million with positive EBITDA, sustainable cash flow, and experienced management teams.
               </p>
             </div>
             
@@ -138,9 +146,9 @@ export default function Home() {
 
       {/* Team Accordion Section */}
       <section id="team" className="relative bg-primary">
-        <div className="container mx-auto py-16">
+        <div className="container mx-auto py-8 lg:py-16 px-4 lg:px-0">
           <div className="text-center mb-12">
-            <h2 className="text-[29.9px] text-gray-light font-haboro mb-4">OUR TEAM</h2>
+            <h2 className="text-heading-mobile md:text-heading-lg text-gray-light font-haboro mb-4">OUR TEAM</h2>
           </div>
           <TeamAccordion /> 
         </div>
@@ -148,9 +156,9 @@ export default function Home() {
 
       {/* Investor Relations Section - Modernized */}
       <section className="bg-white">
-        <div className="container mx-auto py-16">
+        <div className="container mx-auto py-8 lg:py-16 px-4 lg:px-0">
           <div className="text-center mb-12">
-            <h2 className="text-[29.9px] font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
+            <h2 className="text-heading-mobile md:text-heading-lg font-haboro text-primary mb-4">INVESTOR RELATIONS</h2>
           </div>
           
           <Link 
@@ -158,16 +166,16 @@ export default function Home() {
           >
             <div className="flex flex-col md:flex-row justify-between items-center border-primary border-b pb-4">
               <div>
-                <h3 className="text-[24.7px] font-haboro text-gray-dark mb-2 uppercase">
+                <h3 className="text-heading-mobile md:text-heading font-haboro text-gray-dark mb-2 uppercase">
                   Access Financial Information
                 </h3>
-                <p className="text-[27.3px] text-gray-dark font-thin">
+                <p className="text-body-mobile md:text-body text-gray-dark font-thin">
                     View SEC fillings for WILLOW LANE ACQUISITION CORPORATION
                 </p>
               </div>
-              <div className="mt-4 md:mt-0">
+              <div className="mt-4 md:mt-0 hidden lg:block">
                 <span className="inline-flex items-center text-gray-800 hover:text-primary transition-colors duration-200 font-medium">
-                  <ChevronRightIcon className="w-8 h-8" />
+                  <ChevronRightIcon className="w-4 h-4 lg:w-8 lg:h-8" />
                 </span>
               </div>
             </div>
@@ -177,9 +185,9 @@ export default function Home() {
 
       {/* Governance Documents Section */}
       <section id="governance" className=" bg-primary text-gray-light">
-        <div className="container mx-auto py-16">
+        <div className="container mx-auto py-8 lg:py-16 px-4 lg:px-0">
           <div className="text-center mb-12">
-            <h2 className="text-[29.9px] font-haboro text-gray-light mb-4">GOVERNANCE DOCUMENTS</h2>
+            <h2 className="text-heading-mobile md:text-heading-lg font-haboro text-gray-light mb-4">GOVERNANCE DOCUMENTS</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-4">

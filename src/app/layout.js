@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col min-h-screen bg-white font-source-sans">
         <header className="w-full bg-white border-b border-primary">
           <nav className="container mx-auto py-2">
-            <div className="flex justify-between md:justify-start px-2 md:px-0 gap-24 items-center h-48">
+            <div className="flex justify-between lg:justify-start px-4 lg:px-2 gap-24 items-center h-48">
               {/* Logo */}
               <Link href="/" className="relative">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px]">
@@ -39,14 +39,14 @@ export default function RootLayout({ children }) {
               </Link>
 
               {/* Desktop Navigation */}
-              <ul className="hidden md:flex md:flex-wrap items-center gap-4 text-[24.7px] w-full justify-between font-haboro text-primary">
+              <ul className="hidden lg:flex lg:flex-wrap items-center gap-4 text-heading w-full justify-between font-haboro text-primary">
                 <NavItems />
               </ul>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 text-gray-600"
+                className="lg:hidden p-2 text-primary ml-auto"
                 aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? (
@@ -59,8 +59,8 @@ export default function RootLayout({ children }) {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-              <div className="md:hidden bg-white border-t">
-                <ul className="flex flex-col py-4 px-4 font-haboro text-primary">
+              <div className="lg:hidden bg-white border-t">
+                <ul className="flex flex-col py-4 px-4 font-haboro text-heading-mobile text-primary">
                   <NavItems mobile={true} />
                 </ul>
               </div>
@@ -76,16 +76,17 @@ export default function RootLayout({ children }) {
           <div className="container mx-auto py-8 flex items-center justify-between flex-col md:flex-row md:justify-between">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-right">
-                <p className="font-haboro uppercase text-[24.7px] mb-2">Contact Information:</p>
+                <p className="font-haboro uppercase text-heading-mobile md:text-heading mb-2">Contact Information:</p>
                 <p className="flex flex-colitems-center justify-center md:justify-start mb-1 font-source-sans">
-                  <span className="text-[26px]">(646) 565-3861</span>
+                  <span className="text-contact-mobile md:text-contact">(646) 565-3861</span>
                 </p>
-                <p className="flex items-center justify-center md:justify-start font-source-sans text-[26px]">
+                <p className="flex items-center justify-center md:justify-start font-source-sans text-contact-mobile md:text-contact">
                   <a href="mailto:info@willowac.com" className="hover:underline">info@willowac.com</a>
                 </p>
               </div>
             </div>
-            <Image src="/logo_nav.png" alt="Company Logo" width={300} height={300} />
+            <Image src="/logo_nav.png" alt="Company Logo" width={300} height={300} className="hidden md:block" />
+            <Image src="/logo_nav.png" alt="Company Logo" width={200} height={200} className="block md:hidden mt-6" />
           </div>
         </footer>
       </body>

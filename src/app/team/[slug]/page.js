@@ -98,7 +98,7 @@ const teamMembers = {
       name: 'Lorne Weil',
       title: 'Advisor',
       bio: [
-        "Lorne serves as an advisor to the Company. Mr. Weil has served as the Executive Chairman of Inspired Entertainment, Inc. (“Inspired”) since the consummation of its business combination that created the current Inspired Entertainment, Inc. in December 2016. Mr. Weil was the co-sponsor and founder of Inspired’s predecessor, Hydra Industries, and served as its Chairman and Chief Executive Officer since its formation in 2014. Mr. Weil has been a principal of Hydra Management, an investment vehicle he formed, since September 2014. Mr. Weil was Chairman of the Board of Scientific Games Corporation (and its predecessor, Autotote Corporation) from October 1991 to November 2013.  In 2011, Mr. Weil was the sponsor and Chairman of the Board of Andina I, and is currently the Chairman of its successor entity, Tecnoglass Inc. Mr. Weil served as Executive Chairman of Leisure Acquisition, a SPAC, from September 2017 until it completed a business combination in June 2021. Mr. Weil also served as the Chief Executive Officer of Scientific Games Corporation from 1992 to 2008 and from November 2010 to November 2013 and as the President from August 1997 to June 2005. Prior to joining Scientific Games, Mr. Weil was President of Lorne Weil, Inc. from 1979 to November 1992. From 1974 to 1979, Mr. Weil was Vice President — Corporate Development at General Instrument Corporation. From 1970 to 1974, Mr. Weil was a manager with the Boston Consulting Group. Mr. Weil received his undergraduate degree from the University of Toronto, an M.S. degree from the London School of Economics and an M.B.A. from Columbia University.",
+        "Lorne serves as an advisor to the Company. Mr. Weil has served as the Executive Chairman of Inspired Entertainment, Inc. (“Inspired”) since the consummation of its business combination that created the current Inspired Entertainment, Inc. in December 2016. Mr. Weil was the co-sponsor and founder of Inspired's predecessor, Hydra Industries, and served as its Chairman and Chief Executive Officer since its formation in 2014. Mr. Weil has been a principal of Hydra Management, an investment vehicle he formed, since September 2014. Mr. Weil was Chairman of the Board of Scientific Games Corporation (and its predecessor, Autotote Corporation) from October 1991 to November 2013.  In 2011, Mr. Weil was the sponsor and Chairman of the Board of Andina I, and is currently the Chairman of its successor entity, Tecnoglass Inc. Mr. Weil served as Executive Chairman of Leisure Acquisition, a SPAC, from September 2017 until it completed a business combination in June 2021. Mr. Weil also served as the Chief Executive Officer of Scientific Games Corporation from 1992 to 2008 and from November 2010 to November 2013 and as the President from August 1997 to June 2005. Prior to joining Scientific Games, Mr. Weil was President of Lorne Weil, Inc. from 1979 to November 1992. From 1974 to 1979, Mr. Weil was Vice President — Corporate Development at General Instrument Corporation. From 1970 to 1974, Mr. Weil was a manager with the Boston Consulting Group. Mr. Weil received his undergraduate degree from the University of Toronto, an M.S. degree from the London School of Economics and an M.B.A. from Columbia University.",
       ],
       photo: '/team/Lorne Weil Photo.jpg'
     }
@@ -129,23 +129,25 @@ export default function TeamMemberBio({ params }) {
   }
 
   return (
-    <div className="container mx-auto py-16 px-8">
+    <div className="container mx-auto py-8 lg:py-16 px-4 lg:px-8">
       
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="w-72 h-96 relative flex-shrink-0">
+          <div className="w-full h-96 md:w-72 md:h-96 relative flex-shrink-0">
             <Image
               src={member.photo || "/profile.webp"}
               alt={member.name}
               fill
-              className="grayscale object-cover object-center"
+              className="grayscale object-cover object-top"
               priority
             />
           </div>
+
+
           <div className="flex-1">
-            <h1 className="text-[24.7px] font-source-sans font-thin uppercase text-gray-dark mb-2">{member.name}</h1>
-            <h2 className="text-[27.3px] text-gray-dark italic font-thin mb-4">{member.title}</h2>
+            <h1 className="text-heading-mobile md:text-heading font-source-sans font-thin uppercase text-gray-dark mb-2">{member.name}</h1>
+            <h2 className="text-body-mobile md:text-body text-gray-dark italic font-thin mb-4">{member.title}</h2>
             <p className="h-1 border-b border-primary w-1/2 mb-4"></p>
-            <p className="text-gray-dark/80 leading-relaxed text-[20.8px] font-thin">
+            <p className="text-doc-mobile md:text-doc text-gray-dark/80 leading-relaxed font-thin">
               {member.bio.join(' ')}
             </p>
           </div>
