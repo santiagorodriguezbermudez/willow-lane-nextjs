@@ -102,15 +102,6 @@ export default function Home() {
       <section className="bg-primary px-4 lg:px-0">
         {/* Background Icon */}
         <div className='container mx-auto py-8 lg:py-16 relative'>
-            <div className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2">
-              <Image
-                src="/logo_hero.png"
-                alt="Decorative background"
-                width={200}
-                height={200}
-                priority
-              />
-            </div>
             <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2">
               <Image
                 src="/logo_hero.png"
